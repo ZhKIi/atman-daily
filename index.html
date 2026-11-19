@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>奥特曼之家的日报 · 每日归档</title>
+<style>
+:root{--ink:#0f2a43;--line:#e2e9f0;--muted:#6b7d90;--bg:#f5f8fb;--up:#c0392b;--down:#1e8449;--card:#fff}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:#22303d;font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;line-height:1.7;-webkit-text-size-adjust:100%}
+.topbar{position:sticky;top:0;z-index:9;background:var(--ink);color:#fff;padding:12px 16px;display:flex;align-items:center;justify-content:space-between;gap:10px}
+.brand{display:flex;align-items:center;gap:8px;font-weight:800;font-size:15px;letter-spacing:.3px;white-space:nowrap}
+.dot{width:8px;height:8px;border-radius:50%;background:#4cc38a;display:inline-block}
+.brand small{font-weight:500;opacity:.7;font-size:12px}
+.wrap{max-width:860px;margin:0 auto;padding:18px 14px 48px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px 22px;margin-bottom:16px;box-shadow:0 1px 2px rgba(15,42,67,.04)}
+h1{margin:0 0 6px;font-size:24px;color:var(--ink);letter-spacing:-.3px}
+h2{margin:0 0 12px;font-size:16px;color:var(--ink)}
+.sub{margin:0;color:var(--muted);font-size:13px}
+.tag{display:inline-block;background:var(--ink);color:#fff;font-size:11.5px;font-weight:700;padding:3px 9px;border-radius:999px;vertical-align:middle;margin-right:8px;letter-spacing:.5px}
+.tag.g{background:var(--down)}
+.latest{display:block;text-decoration:none;color:inherit;border:1px solid var(--line);border-radius:12px;padding:16px 18px;background:linear-gradient(180deg,#fbfdff,#fff);transition:border-color .15s,transform .15s}
+.latest:hover{border-color:var(--ink);transform:translateY(-1px)}
+.latest .t{font-size:18px;font-weight:800;color:var(--ink);margin:0 0 6px;line-height:1.5}
+.latest .m{color:var(--muted);font-size:12.5px;margin:0}
+.go{display:inline-block;margin-top:10px;font-weight:700;font-size:13px;color:var(--up)}
+.list{margin:0;padding:0;list-style:none}
+.list li{display:flex;align-items:baseline;justify-content:space-between;gap:10px;padding:11px 0;border-bottom:1px dashed var(--line)}
+.list li:last-child{border-bottom:none}
+.list a{color:var(--ink);text-decoration:none;font-weight:700;font-size:14px}
+.list a:hover{color:var(--up)}
+.list time{color:var(--muted);font-size:12px;white-space:nowrap;font-variant-numeric:tabular-nums}
+.note{background:#fbfdff;border-left:3px solid var(--ink);padding:12px 14px;border-radius:0 8px 8px 0;font-size:13px;color:#3c4b5a;margin:0}
+.note b{color:var(--ink)}
+.foot{color:var(--muted);font-size:12px;text-align:center;line-height:1.8;padding:8px 4px 0}
+@media(max-width:520px){
+ .wrap{padding:14px 10px 40px}
+ .card{padding:16px 14px;border-radius:12px}
+ h1{font-size:19px}
+ .latest .t{font-size:16px}
+ .list li{flex-direction:column;align-items:flex-start;gap:2px}
+ .brand{font-size:13.5px}
+ .brand small{display:none}
+}
+</style>
+</head>
+<body>
+<div class="topbar">
+  <div class="brand"><span class="dot"></span>奥特曼之家的日报<small>·固定入口</small></div>
+</div>
+<div class="wrap">
+
+  <div class="card">
+    <h1>奥特曼之家的日报</h1>
+    <p class="sub">每个交易日 15:35 更新 · 宏观数据 / 全球冲突与政策 / 科技股行情 / AI 资讯 · 这个地址长期不变，收藏即可</p>
+  </div>
+
+  <div class="card">
+    <h2>最新一期</h2>
+    <a class="latest" href="2026-11-18.html">
+      <p class="t"><span class="tag">收盘深度版</span>加息预期压顶，金价七连跌、A股地量分化</p>
+      <p class="m">2026年11月18日（周三）· 数据截止北京时间 15:35 · 含科技股行情与 AI 资讯 10 条</p>
+      <span class="go">阅读全文 →</span>
+    </a>
+  </div>
+
+  <div class="card">
+    <h2>历史归档</h2>
+    <ul class="list">
+      <li><a href="2026-11-18.html">2026-11-18 收盘深度版</a><time>2026-11-18</time></li>
+      <li><a href="digest-2026-11-18.html">2026-11-18 邮件导读版</a><time>2026-11-18</time></li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>关于这个站点</h2>
+    <p class="note"><b>为什么固定：</b>托管在 GitHub Pages，仓库里的文件就是站点内容，每次发布只覆盖页面、地址不变；旧期保留在归档里，转发出去的历史链接也不会失效。<br><b>内容口径：</b>A股 15:00 收盘、港股 16:00 收盘；美股为前一交易日收盘并注明日期；金油汇取 15:00–15:35 最新报价并标注时点。<br><b>免责：</b>本报告为公开信息整理与宏观解读，不构成投资建议。投资有风险，决策请自行判断。</p>
+  </div>
+
+  <div class="foot">
+    奥特曼之家的日报 · 固定入口页<br>
+    本页仅作导航与归档，不构成投资建议。
+  </div>
+</div>
+</body>
+</html>

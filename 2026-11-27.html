@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>奥特曼之家的日报 2026-11-27（收盘深度版）</title>
+<style>
+:root{--ink:#0f2a43;--up:#c0392b;--down:#1e8449;--flat:#7b8794;--line:#e2e9f0;--muted:#6b7d90;--bg:#f5f8fb;--card:#fff}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:#22303d;font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;line-height:1.75;-webkit-text-size-adjust:100%;font-size:15px}
+.topbar{position:sticky;top:0;z-index:9;background:var(--ink);color:#fff;padding:10px 16px;display:flex;align-items:center;justify-content:space-between;gap:10px}
+.brand{display:flex;align-items:center;gap:8px;font-weight:800;font-size:15px;white-space:nowrap}
+.dot{width:8px;height:8px;border-radius:50%;background:#4cc38a;display:inline-block}
+.bdate{font-weight:500;opacity:.75;font-size:12.5px}
+.barright{display:flex;align-items:center;gap:8px;flex-shrink:0}
+.sblink{width:210px;max-width:34vw;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);color:#fff;border-radius:7px;padding:5px 8px;font-size:11.5px}
+.sblink::placeholder{color:rgba(255,255,255,.6)}
+.cbtn{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.3);color:#fff;border-radius:7px;padding:5px 11px;font-size:12px;cursor:pointer;white-space:nowrap;font-family:inherit}
+.cbtn:hover{background:rgba(255,255,255,.24)}
+.wrap{max-width:900px;margin:0 auto;padding:18px 14px 50px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px 22px;margin-bottom:16px;box-shadow:0 1px 2px rgba(15,42,67,.04)}
+h1{margin:0 0 8px;font-size:23px;line-height:1.45;color:var(--ink);letter-spacing:-.3px}
+h2{margin:0 0 14px;font-size:19px;color:var(--ink);display:flex;align-items:baseline;gap:2px;flex-wrap:wrap}
+h2 .num{color:var(--up);font-weight:800}
+h3{margin:18px 0 8px;font-size:16px;color:var(--ink)}
+h4{margin:14px 0 6px;font-size:14.5px;color:var(--ink)}
+.badge{display:inline-block;background:var(--ink);color:#fff;font-size:11.5px;font-weight:700;padding:3px 10px;border-radius:999px;vertical-align:middle;margin-right:9px;letter-spacing:.5px}
+.sub{margin:0;color:var(--muted);font-size:13px}
+p{margin:0 0 11px}
+.secnote{color:var(--muted);font-size:12.5px;line-height:1.7;margin:0 0 14px;padding:9px 12px;background:#fbfdff;border-left:3px solid var(--line);border-radius:0 7px 7px 0}
+.src{color:var(--muted);font-size:11.5px;line-height:1.65;margin:8px 0 0}
+.src a{color:var(--muted)}
+ol,ul{margin:0 0 10px;padding-left:20px}
+li{margin-bottom:7px}
+b,strong{color:var(--ink)}
+.up{color:var(--up);font-weight:700}
+.down{color:var(--down);font-weight:700}
+.flat{color:var(--flat);font-weight:700}
+table{width:100%;border-collapse:collapse;margin:6px 0 4px;font-size:13.5px}
+thead th{background:var(--ink);color:#fff;text-align:left;padding:9px 10px;font-weight:700;font-size:12.5px;white-space:nowrap}
+tbody td{padding:8px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+tbody tr:nth-child(even){background:#fbfdff}
+tbody td.n{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+tbody td:first-child{font-weight:700;color:var(--ink)}
+.five{counter-reset:f}
+.five .it{padding:11px 0;border-bottom:1px dashed var(--line)}
+.five .it:last-child{border-bottom:none}
+.five .t{font-weight:800;color:var(--ink)}
+.bb{border:1px solid var(--line);border-radius:11px;padding:14px 16px;margin:0 0 12px;background:#fbfdff}
+.bb .h{font-weight:800;font-size:14.5px;margin:0 0 9px;padding-bottom:7px;border-bottom:1px solid var(--line)}
+.bb.pos .h{color:var(--up)}
+.bb.neg .h{color:var(--down)}
+.bb .row{margin-bottom:9px}
+.bb .row:last-child{margin-bottom:0}
+.bb .row b{display:block;font-size:13.5px}
+.bb .row span{font-size:13px;color:#3c4b5a}
+.ni{padding:11px 0;border-bottom:1px dashed var(--line)}
+.ni:last-child{border-bottom:none}
+.ni .nt{font-weight:800;font-size:14.5px;margin:0 0 4px}
+.ni.u .nt{color:var(--up)}
+.ni.d .nt{color:var(--down)}
+.ni .nb{font-size:13.5px;margin:0 0 4px}
+.ni .nm{font-size:11.5px;color:var(--muted)}
+.ni .nm a{color:var(--muted);word-break:break-all}
+.risk{background:#fff8f6;border:1px solid #f3d9d3;border-left:3px solid var(--up);border-radius:0 9px 9px 0;padding:12px 14px;font-size:13.5px;margin:10px 0}
+.foot{color:var(--muted);font-size:12px;text-align:center;line-height:1.85;padding:10px 4px 0}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media(max-width:680px){
+ body{font-size:14.5px}
+ .topbar{padding:9px 11px;gap:7px}
+ .brand{font-size:13px;gap:6px}
+ .bdate{display:none}
+ .sblink{display:none}
+ .cbtn{padding:5px 9px;font-size:11.5px}
+ .wrap{padding:13px 10px 40px}
+ .card{padding:15px 13px;border-radius:12px}
+ h1{font-size:19px}
+ h2{font-size:17px}
+ .grid2{grid-template-columns:1fr}
+ table,thead,tbody,tr,td{display:block;width:100%}
+ thead{display:none}
+ tbody tr{border:1px solid var(--line);border-radius:10px;padding:10px 12px;margin-bottom:10px;background:#fff}
+ tbody tr:nth-child(even){background:#fff}
+ tbody tr td{display:grid;grid-template-columns:82px 1fr;gap:4px 10px;align-items:baseline;padding:4px 0;border:none;border-bottom:1px dashed #eef3f7;white-space:normal;text-align:left;font-size:13px;line-height:1.6}
+ tbody tr td:last-child{border-bottom:none;padding-bottom:0}
+ tbody tr td::before{content:attr(data-l);color:var(--muted);font-size:11.5px;font-weight:700;text-align:left}
+ tbody tr td:first-child{width:auto;display:block;text-align:left;font-weight:800;color:var(--ink);font-size:13.5px;padding:0 0 7px;margin-bottom:4px;border-bottom:1px solid var(--line);line-height:1.5}
+ tbody tr td:first-child::before{display:none}
+ tbody tr td.n{text-align:right;white-space:normal}
+}
+</style>
+</head>
+<body>
+<div class="topbar">
+<div class="brand"><span class="dot"></span>奥特曼之家的日报<span class="bdate"> · 2026年11月27日</span></div>
+<div class="barright">
+<input class="sblink" id="shareLink" readonly value="" placeholder="分享链接：点击复制链接自动获取当前地址">
+<button class="cbtn" onclick="copyLink()">复制链接</button>
+<a class="cbtn" href="archive.html" style="text-decoration:none;display:inline-flex;align-items:center">归档</a>
+<button class="cbtn" onclick="copyAll()">复制全文</button>
+</div>
+</div>
+
+<div class="wrap">
+<div class="card">
+<h1><span class="badge">收盘深度版</span>国常会盘中定调点燃A股：创业板暴涨11.61%，金价深V反弹2.8%</h1>
+<p class="sub">2026年11月27日（周五）· A股交易日 · 数据截止北京时间 16:05（金银油汇与港股取16:00–16:01最新报价并逐项标注）· 地缘与政策扫描窗口 11-21 至 11-27</p>
+</div>
+<div class="card">
+<h3 style="margin-top:0">数据口径说明</h3>
+<p class="secnote">A股 15:00 收盘；港股 16:00 收盘（本期已取到收盘价）；上金所 15:30 日盘。金银油汇取 16:00–16:01 最新报价，具体时点逐项标注。<b>美股为美东 11月25日（周三）收盘</b>——11月26日（周四）感恩节休市，11月27日（周五）美东时间 13:00 提前收盘、北京时间 11-28 凌晨才结束，不存在「今天的美股」。科技股涨跌口径：日＝对前一交易日收盘，本周＝对上周五 11-20 收盘，本月＝对上月末 10-30 收盘，全部由日K收盘价程序计算。国内金饰零售价取当日最新公开挂牌价；成品油取发改委 11-26 公告与当日执行价。来源等级：A级官方一手直接采信，B级权威媒体注明时间，C级线索已回查A/B级，自媒体与无法追溯的网传不采用；交战方声明一律标注「某方宣称」。</p>
+</div>
+<div class="card">
+<h2><span class="num">一、</span>今日五句话</h2>
+<div class="five">
+<div class="it"><span class="t">国常会罕见盘中发声是今天行情的引爆点，这不是普通反弹而是政策底确认：</span>11月27日午间国常会新闻稿发布，首次写入「加力发挥国家队稳市作用」「优化中央汇金公司类平准基金功能」「提供充足流动性保障」，一个月内第二次专门定调资本市场。午后A股直线拉升：上证收 3606.49 涨 3.73%、深成指涨 7.24%、创业板指涨 11.61%（历史第二大单日涨幅，仅次于2024-09-30的15.36%）、科创50涨 15.07%、北证50涨 13.20%；两市成交 19997.94 亿元、较昨日放量 6824 亿元，5382 只上涨、426 只涨停、0 跌停。<b>「平准基金」从机构讨论升格为国常会白纸黑字，市场把它读成无限流动性背书——这是估值逻辑的变化，不只是情绪修复。</b></div>
+<div class="it"><span class="t">黄金白银深V暴动，但定价权仍在美联储手里，别把反弹当反转：</span>伦敦金现 16:01 报 3666.06 美元/盎司，日内涨 2.80%，从本周二 3426 美元的阶段低点已修复约 240 美元；伦敦银现涨 6.59% 报 44.23 美元；上金所 Au99.99 日盘收 784.00 元/克涨 2.37%。驱动是风险偏好回暖+美元回落+超卖修复，中东炼油厂遇袭提供避险溢价。<b>但 12 月美联储加息 25 基点已被市场 99% 定价，10 月核心 PCE 同比 3.3% 创两年新高——利率压制未解，机构主流判断这是技术性修复而非趋势反转。</b></div>
+<div class="it"><span class="t">半导体全线涨停潮背后是「出口管制反向利好国产」的逻辑闭环：</span>英伟达被曝要求戴尔、超微等伙伴停止向新加坡、马来西亚、泰国、印尼（另有报道称含巴西）发运AI服务器以符合美国新出口管制；广东省 11-26 印发算力「十五五」规划明确鼓励优先使用国产算力芯片（2028年智算规模破1000 EFlops）；ISSCC 2027 议程披露华为定制 HBM 方案。寒武纪收 1118.99 元涨 18.68% 重回千元、中芯国际涨 15.38%、中际旭创与新易盛双双 20CM 涨停。<b>海外断供越狠，国产替代订单确定性越强——资金买的是这个逻辑，不是当天业绩。</b></div>
+<div class="it"><span class="t">中东在打能源设施的主意了：沙特两大炼油厂接连遇袭、霍尔木兹再传油轮触雷：</span>胡塞武装宣称 11-25 击中沙特最大炼油厂拉斯塔努拉（55万桶/日），卫星图像显示约600平方公里浓烟；沙特能源部证实 11-26 吉赞炼油厂遭袭起火、一名尼泊尔籍工人死亡（确认死亡1人，沙特能源部口径）、部分作业暂停；伊朗革命卫队宣称 11-26 两艘油轮在霍尔木兹触雷起火、其中一艘载油超200万桶（伊方口径，路透称无法独立核实）。布伦特本周三连涨创近三周新高。<b>冲突从「打仗」升级到「打钱」——能源基础设施成为目标，油价的地缘溢价回来了。</b></div>
+<div class="it"><span class="t">全球央行12月集体转鹰，日本可能一次加50基点，这是下一轮波动的引信：</span>美联储 12-08/09 加息 25 基点概率 99%（利率期货口径）；欧央行 10 月纪要称通胀前景恶化、部分委员担心 2028 年后才能回到 2%，12 月加息几成定局；日本央行鹰派委员田村直树 11-26 明示不排除单次加息 50 基点、支持 12 月行动，东京 11 月核心 CPI 同比 2.9% 创 16 个月新高再添筹码。<b>A股今天的政策底对冲的是外部利率顶——两边赛跑，12月中旬三大央行议息密集落地前，波动不会小。</b></div>
+</div>
+</div>
+
+<div class="card">
+<h2><span class="num">二、</span>数据总览</h2>
+<p class="secnote">20 项必查指标。金银油汇为 16:00–16:01 快照并标注时点；上金所为 15:30 日盘；美股与美债为美东 11-25 收盘（11-26 感恩节休市）；港股为 16:00 收盘。中证系主题指数当日收盘因接口拒连未获权威值，详见专题A与第八节，不估数填充。</p>
+<table><thead><tr><th>指标</th><th>最新值</th><th>日环比</th><th>周趋势</th><th>月趋势</th></tr></thead><tbody>
+<tr><td data-l="指标">伦敦金现（美元/盎司）</td><td data-l="最新值" class="n">3666.06（16:01）</td><td data-l="日环比"><span class="up">+2.80%</span></td><td data-l="周趋势"><span class="up">+3.72%</span></td><td data-l="月趋势"><span class="down">-5.43%</span></td></tr>
+<tr><td data-l="指标">伦敦银现（美元/盎司）</td><td data-l="最新值" class="n">44.23（16:01）</td><td data-l="日环比"><span class="up">+6.59%</span></td><td data-l="周趋势"><span class="up">+7.41%</span></td><td data-l="月趋势"><span class="down">-9.90%</span></td></tr>
+<tr><td data-l="指标">上金所Au99.99（元/克）</td><td data-l="最新值" class="n">784.00（15:30日盘）</td><td data-l="日环比"><span class="up">+2.37%</span></td><td data-l="周趋势"><span class="up">+2.54%</span></td><td data-l="月趋势"><span class="down">-8.28%</span></td></tr>
+<tr><td data-l="指标">COMEX黄金期货（美元/盎司，主力连续合约）</td><td data-l="最新值" class="n">3693.89（16:01）</td><td data-l="日环比"><span class="up">+2.81%</span></td><td data-l="周趋势"><span class="up">+4.39%</span></td><td data-l="月趋势"><span class="down">-4.90%</span></td></tr>
+<tr><td data-l="指标">WTI原油（美元/桶，1月合约）</td><td data-l="最新值" class="n">85.981（16:01）</td><td data-l="日环比"><span class="up">+1.27%</span></td><td data-l="周趋势"><span class="up">+2.85%</span></td><td data-l="月趋势"><span class="down">-16.47%</span></td></tr>
+<tr><td data-l="指标">布伦特原油（美元/桶，1月合约）</td><td data-l="最新值" class="n">92.341（16:01）</td><td data-l="日环比"><span class="up">+0.70%</span></td><td data-l="周趋势"><span class="down">-0.15%</span></td><td data-l="月趋势"><span class="down">-18.57%</span></td></tr>
+<tr><td data-l="指标">在岸USD/CNY</td><td data-l="最新值" class="n">6.6542（16:00）</td><td data-l="日环比"><span class="down">-0.09%</span></td><td data-l="周趋势"><span class="down">-0.26%</span></td><td data-l="月趋势"><span class="down">-0.02%</span></td></tr>
+<tr><td data-l="指标">离岸USD/CNH</td><td data-l="最新值" class="n">6.6544（16:01）</td><td data-l="日环比"><span class="down">-0.11%</span></td><td data-l="周趋势"><span class="down">-0.29%</span></td><td data-l="月趋势"><span class="up">+0.02%</span></td></tr>
+<tr><td data-l="指标">人民币中间价（USD/CNY）</td><td data-l="最新值" class="n">6.7075（11-27 9:15）</td><td data-l="日环比">-0.031%（调升21点）</td><td data-l="周趋势">—</td><td data-l="月趋势">—</td></tr>
+<tr><td data-l="指标">美元指数</td><td data-l="最新值" class="n">103.783（11-26收盘）</td><td data-l="日环比"><span class="up">+0.08%</span></td><td data-l="周趋势"><span class="down">-0.05%</span></td><td data-l="月趋势"><span class="up">+1.78%</span></td></tr>
+<tr><td data-l="指标">上证指数</td><td data-l="最新值" class="n">3606.49（15:00收盘）</td><td data-l="日环比"><span class="up">+3.73%</span></td><td data-l="周趋势"><span class="up">+2.06%</span></td><td data-l="月趋势"><span class="up">+0.21%</span></td></tr>
+<tr><td data-l="指标">深证成指</td><td data-l="最新值" class="n">10814.02（15:00收盘）</td><td data-l="日环比"><span class="up">+7.24%</span></td><td data-l="周趋势"><span class="up">+5.44%</span></td><td data-l="月趋势"><span class="down">-0.18%</span></td></tr>
+<tr><td data-l="指标">创业板指</td><td data-l="最新值" class="n">2443.96（15:00收盘）</td><td data-l="日环比"><span class="up">+11.61%</span></td><td data-l="周趋势"><span class="up">+10.48%</span></td><td data-l="月趋势"><span class="up">+1.26%</span></td></tr>
+<tr><td data-l="指标">科创综指 / 两市成交额</td><td data-l="最新值" class="n">1489.77 / 19998亿元</td><td data-l="日环比">+14.21% / 放量6824亿</td><td data-l="周趋势">+10.42%</td><td data-l="月趋势">+4.82%</td></tr>
+<tr><td data-l="指标">恒生指数 / 恒生科技</td><td data-l="最新值" class="n">22688.68 / 3641.04（16:00收盘）</td><td data-l="日环比">+2.08% / +6.54%</td><td data-l="周趋势">+1.24% / +3.70%</td><td data-l="月趋势">-2.60% / -3.03%</td></tr>
+<tr><td data-l="指标">标普500（美东11-25收盘）</td><td data-l="最新值" class="n">7182.78</td><td data-l="日环比"><span class="down">-0.25%</span></td><td data-l="周趋势"><span class="up">+3.94%</span></td><td data-l="月趋势"><span class="down">-5.24%</span></td></tr>
+<tr><td data-l="指标">纳斯达克综合（美东11-25收盘）</td><td data-l="最新值" class="n">23585.80</td><td data-l="日环比"><span class="down">-0.62%</span></td><td data-l="周趋势"><span class="up">+4.28%</span></td><td data-l="月趋势"><span class="down">-7.28%</span></td></tr>
+<tr><td data-l="指标">92#汽油全国均价 / 下轮调价窗口</td><td data-l="最新值" class="n">多数地区7.7–7.8元/升（隆众测算零售限价）</td><td data-l="日环比">11-26 24时起每吨降440元</td><td data-l="周趋势">92#每升降约0.35元</td><td data-l="月趋势">下一窗口12-10 24时</td></tr>
+<tr><td data-l="指标">10年期美债 / 10年期国债收益率</td><td data-l="最新值" class="n">4.86%（美东11-25收盘） / 1.603%（11-27盘中）</td><td data-l="日环比">美债11-25下行约7BP / 中债+1.65BP</td><td data-l="周趋势">美债连续第八日下行 / 中债1.59%附近震荡</td><td data-l="月趋势">—</td></tr>
+<tr><td data-l="指标">两市融资余额 / 最新PMI</td><td data-l="最新值" class="n">21055.79亿元（11-26） / 49.3%（10月）</td><td data-l="日环比">-158.07亿元 / -0.8个百分点</td><td data-l="周趋势">两融连续回落 / PMI处收缩区间</td><td data-l="月趋势">—</td></tr>
+</tbody></table>
+<p class="src">来源：国家发展改革委、中国外汇交易中心（中国货币网）、上海黄金交易所官网、中证指数公司官网、国家统计局、新华财经、财联社、界面新闻、证券时报、隆众资讯；行情快照取自新浪/腾讯接口并与上述 A/B 级报道交叉核对。</p>
+</div>
+
+<div class="card">
+<h2><span class="num">三、</span>四类资产解读</h2>
+
+<h3>黄金：深V反弹是真的，趋势反转还没证据</h3>
+<p><b>今天发生了什么：</b>伦敦金现 16:01 报 3666.06 美元/盎司（日内 +2.80%），盘中最高 3666.73 美元；本周二（11-25）曾下探 3426.32 美元、较 1 月高点 5598.75 美元最大回撤 38.8%。伦敦银现 16:01 报 44.23 美元（+6.59%），弹性远大于黄金。国内传导：上金所 Au99.99 日盘收 784.00 元/克（+2.37%），盘中最低 755.00 元；黄金 T+D 15:29 报 783.48 元/克。COMEX 黄金主力连续 16:01 报 3693.89 美元（+2.81%）。A股贵金属板块普涨，四川黄金、金诚信盘中涨超 7%。</p>
+<p><b>为什么：</b>三条力量叠加。一是超卖修复——金价从 5598 跌到 3426、跌幅近四成，空头集中止盈后技术性买盘入场；二是风险偏好回暖压美元——全球股市反攻（欧股周四涨近2%、A股周五暴涨），美元指数从 103.9 高位回落，持有黄金的美元成本下降；三是中东避险溢价——沙特两大炼油厂遇袭、霍尔木兹油轮触雷传闻给金价托底。但对面站着更硬的约束：10 月核心 PCE 同比 3.3% 超预期、三季度 GDP 上修至 4.3%，12 月加息 25 基点概率 99%，实际利率难降。央行购金是长期底——三季度全球央行净购金超 320 吨、同比增 42%，中国央行连续 24 个月增持。</p>
+<p><b>接下来看什么：</b>短期参考 3550–3720 美元区间震荡。向上突破触发条件是中东出现新的实质断供（拉斯塔努拉出口终端装船若持续暂停）或美联储 12 月措辞不及预期鹰；向下击穿 3550 的触发条件是 12-08/09 议息加息 50 基点或 2027 年加息路径进一步上修。<b>瑞银维持 2027 年底 5000 美元目标但提示明年一季度不利；国投期货吴江警告年内可能看到 3000 美元甚至国内「6字头」——机构分歧极大，恰恰说明现在不是重仓押方向的时候。</b>银行与上金所已密集发布贵金属风险提示，杠杆多头注意保证金。</p>
+
+<h3>原油：地缘溢价回归，但过剩预期还压在头上</h3>
+<p><b>今天发生了什么：</b>WTI 1月合约 16:01 报 85.98 美元/桶（较昨收 83.68 美元 +1.27%），布伦特主力连续报 92.34 美元（+0.70%）；布伦特 1 月合约 11-26 收 96.57 美元、涨 2.07%、三连涨创近三周新高（华尔街见闻口径）。国内 SC 原油主力 11-26 夜盘收 594.8 元/桶。发改委 11-26 24 时起下调汽柴油每吨 440/425 元，92# 汽油每升降约 0.35 元——国内油价「两连跌」与国际油价反弹形成时间差。</p>
+<p><b>为什么：</b>供应端风险实质化。胡塞宣称击中拉斯塔努拉炼油厂（55万桶/日，毗邻沙特最大原油出口终端），CNN 援引航运消息人士称该终端袭击后装船一度暂停；吉赞炼油厂确认遇袭起火、部分作业暂停；伊朗革命卫队宣称霍尔木兹两艘油轮触雷（其一载油超200万桶）并重申七项条件落实前不开放海峡。压制面同样清晰：EIA/IEA 预计四季度全球油市迎来冲突以来首次累库拐点，10 月 OPEC 产量已恢复至战前约 95%，OPEC+ 拟维持现有配额至明年 1 月、11-29（周日）开会商讨 2027 年目标。<b>地缘往上推、过剩往下压，油价进入高波动拉锯。</b></p>
+<p><b>接下来看什么：</b>短期 WTI 参考 82–90 美元、布伦特 90–98 美元宽幅震荡。向上触发条件是拉斯塔努拉出口终端确认长时间停摆或霍尔木兹再现大型油轮沉没；向下触发条件是 11-29 OPEC+ 会议释放增产信号或 EIA 累库兑现。国内下一轮调价窗口 12-10 24 时，隆众李彦预计上调概率较大——本轮计价周期国际油价已明显回升，加油便宜的窗口可能就是这两周。</p>
+
+<h3>人民币：股市暴涨没有带来贬值压力，反而在升值</h3>
+<p><b>今天发生了什么：</b>11-27 中间价报 6.7075，较前值 6.7096 调升 21 个基点（中国外汇交易中心受权公布）。在岸 16:00 报 6.6542（日内升值 0.09%），离岸 16:01 报 6.6544（升值 0.11%），离岸连续两日盘中涨破 6.66、逼近三周高位。央行今日开展 7940 亿元隔夜逆回购（利率 1.25%），对冲 5715 亿元到期后净投放 2225 亿元，跨月资金面转松，DR001 在 1.27% 附近。</p>
+<p><b>为什么：</b>风险偏好回暖+政策强信号改变了资本流动预期——A股放量暴涨近 2 万亿成交，外资配置人民币资产的意愿边际改善；同时美元指数从高位回落给了非美货币喘息。硬约束仍是利差：中美 10 年期国债利差约 -326BP（中债 1.603% 对美债 4.86%，存在一个交易日时差），深度倒挂限制升值空间。另需注意央行 11-15 起已上调外汇存款准备金率 2 个百分点至 6%，防范汇率超调的工具已经备好。</p>
+<p><b>接下来看什么：</b>在岸参考 6.63–6.70 区间。升值方向触发条件是 12 月美联储加息落地后「利空出尽」+中美对等降税安排落地（商务部 11-26 确认美方 301 拟议措施豁免了 300 亿美元对等降税清单产品）；贬值方向触发条件是美国对华 301 关税从 20% 升至 40% 的威胁兑现（美方称谈判不顺则加码）。<b>换汇刚需不必抢跑，区间内分批即可；出口企业建议利用当前偏强窗口逢高结汇。</b></p>
+
+<h3>股市：政策底+产业催化共振，但一天涨完一周的量能要警惕</h3>
+<p><b>今天发生了什么：</b>上证 3606.49（+3.73%）、深成指 10814.02（+7.24%）、创业板指 2443.96（+11.61%）、科创50 1346.25（+15.07%）、科创综指 1489.77（+14.21%）、北证50 851.79（+13.20%）。两市成交 19997.94 亿元、放量 6824 亿元；5382 涨 181 跌、426 涨停 0 跌停。港股同步：恒指 16:00 收 22688.68（+2.08%）、恒生科技 3641.04（+6.54%），MINIMAX 涨超 11%、智谱涨超 9%。银行、煤炭、电信等高股息逆势下跌——资金从防御全面转向进攻。</p>
+<p><b>为什么：</b>三层共振。政策层：国常会盘中发布「国家队+类平准基金+充足流动性」表述，10 月初以来股票型 ETF 已净申购近 8000 亿元、总规模 2.9 万亿元，监管明确近期修订股份回购规则、提高回购增持再贷款覆盖率（四大行已签回购增持贷款合同超 6000 亿元）。产业层：英伟达东南亚断供强化国产替代、广东算力规划、华为 HBM 论文、长鑫 HBM3 适配头部云厂商，半导体设备订单能见度高（中微公司订单能见度超 80 周、盛美在手订单 170.73 亿元同比+88.2%）。资金层：超跌反弹弹性——多数科技股 11 月以来回撤 30–50%，前期缩量磨底后卖压衰竭。</p>
+<p><b>接下来看什么：</b>上证参考 3520–3700 区间。行情延续的触发条件是下周一成交维持 1.6 万亿以上且涨停家数不明显缩水、宽基 ETF 继续净申购；退潮触发条件是成交快速跌回 1.2 万亿下方+周末美股周五半日交易大跌（美东 11-27 13:00 提前收盘，北京时间 11-28 凌晨 2:00 结束，<b>该冲击尚未被A股消化</b>）。<b>今天创业板 11.61% 的涨幅历史上仅次于 2024-09-30，那次之后市场剧烈震荡——单日暴涨从来不是追高的理由，回踩不破才是上车的信号。</b>下周关注 11-29 OPEC+ 会议、11-30 中国 11 月 PMI、12-04 前后美国就业数据。</p>
+<p class="src">来源：新华社、证监会官网（国常会通稿）、上海证券报、第一财经、财联社、界面新闻、证券时报、中国经济网、中国外汇交易中心、新华财经、华尔街见闻、瑞达期货晨会。</p>
+</div><div class="card">
+<h2><span class="num">专题A、</span>科技股行情</h2>
+<p class="secnote">A股为 2026-11-27 当日收盘；美股为<b>美东 2026-11-25（周三）收盘</b>——11-26 感恩节休市，11-27 周五半日交易北京时间 11-28 凌晨才结束。涨跌口径：日＝对前一交易日收盘，本周＝对上周五 11-20 收盘，本月＝对上月末 10-30 收盘，全部由日K收盘价程序计算。<b>中证半导体 H30184、中证电子 930652、中证光通信 931723 今日收盘均未获权威值</b>（东财实时接口今日持续拒连，中证官网仅更新至 11-26），如实标注未获确认并列出官网最新收盘供参照；算力按规范以国证算力 399363 替代中证算力 931688 并明示。标普500信息技术指数无权威收盘点位，用跟踪 ETF XLK 代理并标注「ETF不等于指数点位」。</p>
+
+<h3>1）A股（2026-11-27 收盘）</h3>
+<h4>指数</h4>
+<table><thead><tr><th>指数</th><th>收盘</th><th>日</th><th>本周</th><th>本月</th></tr></thead><tbody>
+<tr><td data-l="指数">上证指数</td><td data-l="收盘" class="n">3606.49</td><td data-l="日" class="n"><span class="up">+3.73%</span></td><td data-l="本周" class="n"><span class="up">+2.06%</span></td><td data-l="本月" class="n"><span class="up">+0.21%</span></td></tr>
+<tr><td data-l="指数">科创50</td><td data-l="收盘" class="n">1346.25</td><td data-l="日" class="n"><span class="up">+15.07%</span></td><td data-l="本周" class="n"><span class="up">+9.35%</span></td><td data-l="本月" class="n"><span class="up">+15.97%</span></td></tr>
+<tr><td data-l="指数">创业板指</td><td data-l="收盘" class="n">2443.96</td><td data-l="日" class="n"><span class="up">+11.61%</span></td><td data-l="本周" class="n"><span class="up">+10.48%</span></td><td data-l="本月" class="n"><span class="up">+1.26%</span></td></tr>
+<tr><td data-l="指数">中证全指半导体(H30184)</td><td data-l="收盘" class="n">未获确认</td><td data-l="日" class="n">未获确认</td><td data-l="本周" class="n">未获确认</td><td data-l="本月" class="n">未获确认</td></tr>
+<tr><td data-l="指数">中证电子(930652)</td><td data-l="收盘" class="n">未获确认</td><td data-l="日" class="n">未获确认</td><td data-l="本周" class="n">未获确认</td><td data-l="本月" class="n">未获确认</td></tr>
+<tr><td data-l="指数">中证光通信(931723)</td><td data-l="收盘" class="n">未获确认</td><td data-l="日" class="n">未获确认</td><td data-l="本周" class="n">未获确认</td><td data-l="本月" class="n">未获确认</td></tr>
+<tr><td data-l="指数">国证算力(399363)·替代中证算力931688</td><td data-l="收盘" class="n">8388.94</td><td data-l="日" class="n"><span class="up">+12.98%</span></td><td data-l="本周" class="n"><span class="up">+15.07%</span></td><td data-l="本月" class="n"><span class="up">+1.71%</span></td></tr>
+</tbody></table><p class="src">注：H30184/930652/931723当日收盘未获权威值——东财实时接口今日持续拒连，中证官网仅更新至11-26（半导体收8793.63、电子收8351.97、光通信收6782.86、算力931688收2561.83，均为A级官网口径）；算力以国证算力399363替代并明示，两者编制不同不可直接等同。</p><h4>个股（12 只）</h4><table><thead><tr><th>标的</th><th>收盘价</th><th>日涨跌</th><th>周涨跌</th><th>月涨跌</th><th>异动原因</th></tr></thead><tbody>
+<tr><td data-l="标的">中芯国际</td><td data-l="收盘价" class="n">134.42</td><td data-l="日涨跌" class="n"><span class="up">+15.38%</span></td><td data-l="周涨跌" class="n"><span class="up">+7.14%</span></td><td data-l="月涨跌" class="n"><span class="up">+38.88%</span></td><td data-l="异动原因">晶圆代工龙头领涨，国产替代+华为HBM突破催化；盘中涨超10%后尾盘封住15%+，成交活跃（证券时报）</td></tr>
+<tr><td data-l="标的">寒武纪</td><td data-l="收盘价" class="n">1118.99</td><td data-l="日涨跌" class="n"><span class="up">+18.68%</span></td><td data-l="周涨跌" class="n"><span class="up">+21.63%</span></td><td data-l="月涨跌" class="n"><span class="up">+27.16%</span></td><td data-l="异动原因">重回千元关口：英伟达东南亚断供强化国产AI芯片替代逻辑，中信建投指BIS管制延伸至云端算力、国内采购转向本土；全天成交185亿元（证券时报）</td></tr>
+<tr><td data-l="标的">工业富联</td><td data-l="收盘价" class="n">44.74</td><td data-l="日涨跌" class="n"><span class="up">+9.12%</span></td><td data-l="周涨跌" class="n"><span class="up">+20.37%</span></td><td data-l="月涨跌" class="n"><span class="down">-0.58%</span></td><td data-l="异动原因">AI服务器链反弹，戴尔等厂商对已签订单提价25–45%凸显整机议价权（财联社转引）；无独立公告催化，跟随板块</td></tr>
+<tr><td data-l="标的">中际旭创</td><td data-l="收盘价" class="n">516.15</td><td data-l="日涨跌" class="n"><span class="up">+19.98%</span></td><td data-l="周涨跌" class="n"><span class="up">+31.27%</span></td><td data-l="月涨跌" class="n"><span class="down">-6.66%</span></td><td data-l="异动原因">CPO/光模块涨停潮领涨，20CM涨停；公司此前明确在手订单充足、不存在砍单（11-20公告），超跌修复+算力硬件反弹（央广网收评）</td></tr>
+<tr><td data-l="标的">新易盛</td><td data-l="收盘价" class="n">226.84</td><td data-l="日涨跌" class="n"><span class="up">+20.00%</span></td><td data-l="周涨跌" class="n"><span class="up">+37.48%</span></td><td data-l="月涨跌" class="n"><span class="up">+15.73%</span></td><td data-l="异动原因">20CM涨停，CPO概念领涨标的；央广网收评点名算力硬件概念反弹龙头，光模块需求指引明确（公司11-20口径）</td></tr>
+<tr><td data-l="标的">海光信息</td><td data-l="收盘价" class="n">186.37</td><td data-l="日涨跌" class="n"><span class="up">+18.05%</span></td><td data-l="周涨跌" class="n"><span class="up">+13.47%</span></td><td data-l="月涨跌" class="n"><span class="up">+9.50%</span></td><td data-l="异动原因">国产CPU/DCU核心标的，BIS新规延伸云端算力管制→国产采购加速逻辑（中信建投11-24研报）；盘中涨超12%尾盘扩大</td></tr>
+<tr><td data-l="标的">北方华创</td><td data-l="收盘价" class="n">527.38</td><td data-l="日涨跌" class="n"><span class="up">+10.00%</span></td><td data-l="周涨跌" class="n"><span class="down">-8.92%</span></td><td data-l="月涨跌" class="n"><span class="up">+10.16%</span></td><td data-l="异动原因">半导体设备涨停：中微订单能见度超80周、盛美在手订单170.73亿同比+88.2%，长江存储三期国产设备占比破50%（格隆汇/新浪财经）</td></tr>
+<tr><td data-l="标的">澜起科技</td><td data-l="收盘价" class="n">144.50</td><td data-l="日涨跌" class="n"><span class="up">+15.69%</span></td><td data-l="周涨跌" class="n"><span class="up">+12.53%</span></td><td data-l="月涨跌" class="n"><span class="down">-8.72%</span></td><td data-l="异动原因">内存接口芯片受益HBM叙事：ISSCC 2027披露华为定制HBM+长鑫DDR5混合键合，存储链技术突破催化（每经）</td></tr>
+<tr><td data-l="标的">立讯精密</td><td data-l="收盘价" class="n">50.60</td><td data-l="日涨跌" class="n"><span class="up">+9.05%</span></td><td data-l="周涨跌" class="n"><span class="up">+10.72%</span></td><td data-l="月涨跌" class="n"><span class="up">+10.96%</span></td><td data-l="异动原因">消费电子+AI硬件双催化：OpenAI首款AI端侧硬件传年底出货、立讯独家整机制造（每经11-19报道延续发酵）；跟随板块上行</td></tr>
+<tr><td data-l="标的">京东方A</td><td data-l="收盘价" class="n">4.80</td><td data-l="日涨跌" class="n"><span class="up">+6.67%</span></td><td data-l="周涨跌" class="n"><span class="up">+9.34%</span></td><td data-l="月涨跌" class="n"><span class="up">+7.62%</span></td><td data-l="异动原因">面板与消费电子板块普涨，维信诺尾盘涨停带动；无独立催化，跟随板块</td></tr>
+<tr><td data-l="标的">韦尔股份(现名豪威集团)</td><td data-l="收盘价" class="n">86.50</td><td data-l="日涨跌" class="n"><span class="up">+5.49%</span></td><td data-l="周涨跌" class="n"><span class="up">+3.09%</span></td><td data-l="月涨跌" class="n"><span class="up">+4.91%</span></td><td data-l="异动原因">现名豪威集团；CIS设计跟随半导体板块上行，涨幅居池内末位，无独立催化</td></tr>
+<tr><td data-l="标的">科大讯飞</td><td data-l="收盘价" class="n">35.95</td><td data-l="日涨跌" class="n"><span class="up">+6.17%</span></td><td data-l="周涨跌" class="n"><span class="up">+4.20%</span></td><td data-l="月涨跌" class="n"><span class="down">-0.80%</span></td><td data-l="异动原因">AI应用与软件板块反弹，涨幅相对温和；无独立催化，跟随板块</td></tr>
+</tbody></table>
+<h3>2）美股（美东 2026-11-25 周三收盘；11-26 感恩节休市）</h3>
+<h4>指数</h4>
+<table><thead><tr><th>指数</th><th>收盘</th><th>日</th><th>本周</th><th>本月</th></tr></thead><tbody>
+<tr><td data-l="指数">纳斯达克综合</td><td data-l="收盘" class="n">23585.80</td><td data-l="日" class="n"><span class="down">-0.62%</span></td><td data-l="本周" class="n"><span class="up">+4.28%</span></td><td data-l="本月" class="n"><span class="down">-7.28%</span></td></tr>
+<tr><td data-l="指数">纳斯达克100</td><td data-l="收盘" class="n">26046.90</td><td data-l="日" class="n"><span class="down">-0.64%</span></td><td data-l="本周" class="n"><span class="up">+4.07%</span></td><td data-l="本月" class="n"><span class="down">-8.24%</span></td></tr>
+<tr><td data-l="指数">费城半导体SOX</td><td data-l="收盘" class="n">8774.86</td><td data-l="日" class="n"><span class="down">-0.65%</span></td><td data-l="本周" class="n"><span class="up">+4.36%</span></td><td data-l="本月" class="n"><span class="down">-17.91%</span></td></tr>
+<tr><td data-l="指数">标普500信息技术(XLK代理)</td><td data-l="收盘" class="n">155.79</td><td data-l="日" class="n"><span class="down">-0.83%</span></td><td data-l="本周" class="n"><span class="up">+4.55%</span></td><td data-l="本月" class="n"><span class="down">-13.21%</span></td></tr>
+</tbody></table><p class="src">注：美东11-26感恩节休市、11-27周五半日交易尚未结束（北京时间11-28凌晨2:00收盘），本表为11-25收盘。SOX取新浪美股日K并与媒体收盘报道核对（11-25跌0.65%报8774.86，澎湃/财联社一致）；标普500信息技术用XLK ETF代理，ETF价格不等于指数点位。</p><h4>个股（11 只）</h4><table><thead><tr><th>标的</th><th>收盘价</th><th>日涨跌</th><th>周涨跌</th><th>月涨跌</th><th>异动原因</th></tr></thead><tbody>
+<tr><td data-l="标的">英伟达</td><td data-l="收盘价" class="n">149.30</td><td data-l="日涨跌" class="n"><span class="down">-3.91%</span></td><td data-l="周涨跌" class="n"><span class="up">+18.94%</span></td><td data-l="月涨跌" class="n"><span class="down">-27.04%</span></td><td data-l="异动原因">标普全球将其AA评级列入负面信用观察（关键人依赖+董事会监督弱点），CDS创纪录新高；收跌3.91%，市值单日蒸发约1468亿美元（财联社/中华网）</td></tr>
+<tr><td data-l="标的">微软</td><td data-l="收盘价" class="n">489.93</td><td data-l="日涨跌" class="n"><span class="down">-1.25%</span></td><td data-l="周涨跌" class="n"><span class="up">+1.12%</span></td><td data-l="月涨跌" class="n"><span class="down">-6.13%</span></td><td data-l="异动原因">大型科技股普跌中相对抗跌；AI资本开支融资成本担忧压制，无独立利空公告，跟随大盘</td></tr>
+<tr><td data-l="标的">苹果</td><td data-l="收盘价" class="n">355.58</td><td data-l="日涨跌" class="n"><span class="up">+0.43%</span></td><td data-l="周涨跌" class="n"><span class="up">+3.80%</span></td><td data-l="月涨跌" class="n"><span class="up">+3.18%</span></td><td data-l="异动原因">防御属性凸显，七巨头中少数收涨；韩国FTC就iPhone 16 AI功能宣传立案调查为潜在扰动（威锋网）</td></tr>
+<tr><td data-l="标的">谷歌-A</td><td data-l="收盘价" class="n">273.10</td><td data-l="日涨跌" class="n"><span class="down">-2.13%</span></td><td data-l="周涨跌" class="n"><span class="up">+2.94%</span></td><td data-l="月涨跌" class="n"><span class="down">-2.41%</span></td><td data-l="异动原因">CDS创新高+AI债务定价担忧拖累；Gemini生态进展未能对冲宏观抛压，跟随大盘回落</td></tr>
+<tr><td data-l="标的">亚马逊</td><td data-l="收盘价" class="n">244.43</td><td data-l="日涨跌" class="n"><span class="down">-3.12%</span></td><td data-l="周涨跌" class="n"><span class="down">-0.97%</span></td><td data-l="月涨跌" class="n"><span class="up">+1.70%</span></td><td data-l="异动原因">跌3.12%领跌七巨头之一；与Meta磋商解除Muse购物智能体封锁的消息未能扭转抛压（媒体援引消息人士）</td></tr>
+<tr><td data-l="标的">Meta</td><td data-l="收盘价" class="n">609.89</td><td data-l="日涨跌" class="n"><span class="up">+3.40%</span></td><td data-l="周涨跌" class="n"><span class="up">+8.75%</span></td><td data-l="月涨跌" class="n"><span class="down">-0.83%</span></td><td data-l="异动原因">逆势大涨3.40%：与亚马逊磋商将AI智能体Muse接入商城（媒体口径），AI应用商业化预期升温</td></tr>
+<tr><td data-l="标的">博通</td><td data-l="收盘价" class="n">300.86</td><td data-l="日涨跌" class="n"><span class="down">-0.07%</span></td><td data-l="周涨跌" class="n"><span class="down">-1.17%</span></td><td data-l="月涨跌" class="n"><span class="down">-7.73%</span></td><td data-l="异动原因">ASIC叙事暂歇，微跌0.07%基本平收；AI定制芯片需求预期仍在但信用风险溢价压制估值</td></tr>
+<tr><td data-l="标的">AMD</td><td data-l="收盘价" class="n">406.03</td><td data-l="日涨跌" class="n"><span class="down">-1.75%</span></td><td data-l="周涨跌" class="n"><span class="down">-4.33%</span></td><td data-l="月涨跌" class="n"><span class="down">-19.57%</span></td><td data-l="异动原因">跌1.75%，月跌19.57%；存储与GPU链整体承压，MI系列放量预期等待明年验证</td></tr>
+<tr><td data-l="标的">台积电ADR</td><td data-l="收盘价" class="n">342.34</td><td data-l="日涨跌" class="n"><span class="down">-1.96%</span></td><td data-l="周涨跌" class="n"><span class="up">+7.41%</span></td><td data-l="月涨跌" class="n"><span class="down">-15.71%</span></td><td data-l="异动原因">跌1.96%；CoWoS涨价与先进封装扩产利好已部分计价，跟随费半回落</td></tr>
+<tr><td data-l="标的">美光</td><td data-l="收盘价" class="n">601.25</td><td data-l="日涨跌" class="n"><span class="down">-4.53%</span></td><td data-l="周涨跌" class="n"><span class="up">+1.13%</span></td><td data-l="月涨跌" class="n"><span class="down">-32.04%</span></td><td data-l="异动原因">跌4.53%、月跌32.04%：高盛看空存储+涨价向下游传导引发需求担忧，闪迪同跌5.57%（财联社）</td></tr>
+<tr><td data-l="标的">特斯拉</td><td data-l="收盘价" class="n">380.14</td><td data-l="日涨跌" class="n"><span class="down">-1.18%</span></td><td data-l="周涨跌" class="n"><span class="up">+9.92%</span></td><td data-l="月涨跌" class="n"><span class="down">-4.92%</span></td><td data-l="异动原因">跌1.18%；Cybertruck确认2027停产、国内订金全退（快科技）；SpaceX合并传闻提供远期想象但当日未兑现</td></tr>
+</tbody></table>
+
+<h3>3）利好与利空（四个独立子块，按重要性排序）</h3>
+<div class="grid2">
+<div class="bb pos"><p class="h">A股利好</p>
+<div class="row"><b>国常会首提「国家队+类平准基金」，流动性背书制度化</b><span>11-27 午间发布：加力发挥国家队稳市作用、优化中央汇金类平准基金功能、提供充足流动性保障、谋划出台增量政策；10月初以来股票型ETF净申购近8000亿元。监管同步明确修订回购规则、四大行回购增持贷款合同已超6000亿元。</span></div>
+<div class="row"><b>英伟达东南亚断供，国产算力替代逻辑被外部管制强化</b><span>金融时报报道英伟达要求戴尔、超微停止向新马泰印尼发运AI服务器（蓝点网称名单含巴西）；中信建投指BIS新规将管制延伸至云端算力与制造服务，国内客户采购加速转向本土，寒武纪收涨18.68%、海光信息涨18.05%。</span></div>
+<div class="row"><b>广东算力「十五五」规划落地，国产芯片优先写入省级文件</b><span>11-26 印发：2028年智算规模破1000 EFlops（FP16）、2030年超2500亿EFlops力争4000，鼓励算力中心优先使用国产算力芯片，推进昇腾/CANN生态适配；瑞银预计国产AI芯片中国市场份额2028年达88%。</span></div>
+<div class="row"><b>华为HBM+长鑫存储技术进展披露，卡脖子环节出现突破口</b><span>ISSCC 2027议程列入华为定制HBM（五层晶圆混合键合、64通道4096数据接口，引脚密度约为海外量产产品两倍）与长鑫DDR5混合键合研究；长鑫HBM3已完成头部云厂商适配（中信建投口径）。澜起科技涨15.69%。</span></div>
+<div class="row"><b>设备订单能见度实打实，业绩支撑不是纯故事</b><span>中微公司2026年新签订单规模与增速创历史新高、订单能见度超80周；盛美上海在手订单170.73亿元、同比+88.2%；长江存储三期国产设备采购占比突破50%。北方华创涨停（+10.00%）。</span></div>
+</div>
+<div class="bb neg"><p class="h">A股利空</p>
+<div class="row"><b>美国301关税威胁升级，对华税率或从20%升至40%</b><span>USTR「产能过剩」301调查拟对华加征20%，美方称谈判不顺或增至40%；申万宏源测算中国有效税率或升至24–25%，钢铁、电池、化工首当其冲。商务部11-26表态坚决反对、保留反制权利。</span></div>
+<div class="row"><b>单日暴涨透支短期空间，创业板11.61%为历史第二</b><span>仅次于2024-09-30的15.36%，那次之后市场进入剧烈震荡；今日成交19997.94亿元一天放量6824亿，若下周量能不继，追高资金面临回踩风险。</span></div>
+<div class="row"><b>美联储12月加息99%定价，外部利率顶未过</b><span>10月核心PCE同比3.3%创2023年11月以来新高、三季度GDP上修至4.3%；「新美联储通讯社」Timiraos明示别指望美联储救市，沃什更可能借AI下跌给通胀降温。12-08/09议息是硬事件。</span></div>
+<div class="row"><b>债市负反馈仍在发酵，理财赎回压力未解</b><span>信用债舆情冲击下上周基金净卖出信用债1564亿元；10年国开-国债利差一个月走阔约10BP；今日10年国债活跃券收益率上行1.65BP至1.603%，股市抽血效应显现。</span></div>
+<div class="row"><b>今晚美股半日交易尚未被A股消化</b><span>美东11-27周五13:00提前收盘（北京时间11-28凌晨2:00），纳指100本周盘中一度较历史高点回撤20%逼近技术性熊市，若周五续跌，该冲击尚未被A股消化，下周一开盘需重估。</span></div>
+</div>
+<div class="bb pos"><p class="h">美股利好</p>
+<div class="row"><b>周三深V反弹确认低位承接力，道指抹去千点跌幅翻红</b><span>11-25纳指盘中暴跌逾4%后收窄至-0.62%，道指盘中跌超2%后收涨0.33%报50182.95；「大空头」伯里博客称组合「暂时几乎全部做多」提振情绪；高盛指杠杆基金上周抛售约700亿美元纳指期货后增量卖压衰减。</span></div>
+<div class="row"><b>FCC批准SpaceX百万卫星太空数据中心，算力叙事开辟新疆域</b><span>11-25 FCC附条件批准「Starmind」星座（至多100万颗卫星、2033首发2040完成部署），美国史上首次授权太空数据中心；SpaceX股价11-25涨1.3%。</span></div>
+<div class="row"><b>Meta逆势大涨3.40%，AI应用商业化预期升温</b><span>11-25 Meta收609.89美元涨3.40%；据媒体援引消息人士，Meta与亚马逊磋商将AI购物智能体Muse接入亚马逊商城并解除访问限制。</span></div>
+<div class="row"><b>特斯拉-SpaceX合并传闻打开估值想象</b><span>金融时报11-26报道马斯克推动全股票合并、争取12-31前达成协议，合并市值约3.5万亿美元；报道称双方尚未接近达成、需特斯拉股东超50%流通股赞成，落地存不确定性。</span></div>
+<div class="row"><b>ADI等模拟芯片财报强劲，非AI需求也在复苏</b><span>ADI第四财季营收43.7亿美元、2026财年152亿美元同比+38%创新高，公司称超三分之二增长来自非AI市场；11-25亚德诺涨6.44%、德州仪器涨4.55%。</span></div>
+</div>
+<div class="bb neg"><p class="h">美股利空</p>
+<div class="row"><b>标普将英伟达列入负面信用观察，90天内或下调AA评级</b><span>11-25标普全球指黄仁勋短暂离任又复职暴露关键人依赖与董事会监督弱点；英伟达11-25收149.30美元跌3.91%，月跌27.04%；CoreWeave五年期CDS一度升2.09个百分点至15.34%，隐含五年违约概率超70%。</span></div>
+<div class="row"><b>AI融资信用风险指标集体创新高</b><span>ICE Data Services数据：英伟达、谷歌、甲骨文、SpaceX的CDS周三均创纪录新高；欧央行金融稳定报告此前指大型科技企业表外承诺超4万亿美元——市场开始给AI债务定价。</span></div>
+<div class="row"><b>GPU租金降价动摇算力「二房东」商业模式</b><span>SemiAnalysis披露SpaceX将Blackwell小集群现货价从15.5降至10–12美元/小时（最高约35%），Anthropic弃租约5万张H200、SpaceX以5美元/小时转租低于现货约23%；Ramp数据显示企业Token支出连续三月近乎零增长。NewStreet反驳称只是取消小集群溢价，多空分歧公开化。</span></div>
+<div class="row"><b>存储链深跌未止，美光月跌32%</b><span>11-25美光收601.25美元跌4.53%、月跌32.04%；闪迪跌5.57%；高盛看空存储芯片叠加涨价传导担忧，惠普虽因成本转嫁能力大涨11.49%，但下游利润被内存涨价挤压的叙事在扩散。</span></div>
+<div class="row"><b>BTIG警告抛售只走完一半</b><span>策略师Krinsky指标普500仍有55.7%成分股站上50日均线（历史底部中位数仅11%），市场宽度未出清，未来30天平均最大回撤-16%，对应标普6400–6500点；纳指100盘中已较历史高点回撤20%。</span></div>
+</div>
+</div>
+
+<h3>4）一句话总结 + 风险提示</h3>
+<p><b>主要矛盾：</b>A股用「国常会政策底+国产替代产业催化」对冲了「美联储加息顶+AI信用风险」，今天平准基金表述让前者压倒后者；但美股的定价锚仍是利率与AI债务——英伟达CDS创新高说明华尔街在给这条产业链的融资端重新定价，A股买的是国产份额提升的确定性，美股卖的是全球算力资本开支的可持续性，两边交易的不是同一件事。</p>
+<div class="risk"><b>次日风险与事件：</b>①<b>美东11-27（周五）美股半日交易于北京时间11-28凌晨2:00结束，晚于A股11-27收盘，该冲击尚未被A股消化</b>——若纳指续跌超2%，下周一A股科技板块高开逻辑将被削弱；②11-29（周日）OPEC+会议商讨2027年产量目标，若释放增产信号油价回落、若维持配额地缘溢价延续；③11-30（周一）中国11月官方PMI公布，前值49.3，若继续收缩将检验「政策底→基本面底」传导；④韩国11-29召开股市稳定基金紧急会议（KOSPI 11-25曾单日跌6.16%），外围市场若再动荡会传导至A股风险偏好；⑤今日涨停潮中大量个股为超跌反弹（多数距年内高点仍回撤30–50%），若周末无增量政策跟进，注意冲高回落。</div>
+</div>
+
+<div class="card">
+<h2><span class="num">四、</span>对普通人的具体影响</h2>
+<h4>加油：这两周是便宜窗口，下轮可能涨回去</h4>
+<p>发改委 11-26 24 时起汽柴油每吨降 440/425 元，92# 汽油每升降约 0.35 元、95# 降约 0.37 元，50 升油箱加满省约 17.5 元；隆众测算多数地区 92# 零售限价回到 7.7–7.8 元/升（各地实际挂牌略有差异，如湖北 8.03 元、大连 8.08 元）。<b>可执行动作：</b>本轮降价已落地，正常加油即可；但国际油价本周三连涨、布伦特回到 96 美元上方，隆众预计 12-10 24 时的下一轮窗口上调概率较大——跑长途多的车主可在 12 月上旬前把用油安排前置，不必囤油。</p>
+<h4>买金：首饰价格企稳，投资别追今天的反弹</h4>
+<p>今日品牌金饰挂牌：周六福 1063、老庙 1065、六福 1066、周大福 1068、老凤祥 1070、周生生 1072 元/克（金投网汇总，工费另计），较昨日基本持平、个别微调——金价盘中涨 2.8% 但金店挂牌「慢半拍」。投资金条银行报价约 781–795 元/克，黄金回收价约 756 元/克。<b>可执行动作：</b>婚庆刚需现在买比 1 月高点（约1708元/克）便宜约 640 元/克，无需再等；纯投资的，今天 2.8% 的反弹是超卖修复，12 月加息落地前不追高，想配置的等 3550 美元下方或议息后再分批。买卖价差要想清楚：金饰买入 1068、回收只有 756，一进一出损耗近 30%。</p>
+<h4>换汇：人民币偏强窗口，刚需分批、出口逢高结汇</h4>
+<p>在岸 6.6542、离岸 6.6544，中间价 6.7075 调升 21 点，离岸逼近三周高位。<b>可执行动作：</b>留学、旅游刚需在 6.63–6.70 区间分批换汇即可，当前处于区间偏强一侧，不必一次换满；出口企业当前结汇价优于一个月前，建议逢高分批锁定；警惕变量是美国 301 关税若从 20% 加码到 40%，汇率可能快速回摆。</p>
+<h4>房贷 / 存款：LPR 纹丝不动，理财净值波动还没完</h4>
+<p>1 年期 LPR 3.00%、5 年期以上 3.50%（11-20 报价，连续 18 个月不变）；10 年期国债活跃券今日上行 1.65BP 至 1.603%，信用债调整波及理财净值，上周基金净卖出信用债 1564 亿元。<b>可执行动作：</b>房贷挂钩 5 年期 LPR，短期无上调压力，不必为「赌利率反弹」提前还款；持有中低等级信用债理财的注意近期净值回撤是市场性的（舆情+赎回负反馈），不是单只产品暴雷，恐慌性赎回反而兑现浮亏；存款利率仍在下行通道，跨年资金可关注 12 月初摊余成本法债基等低波动工具（第五批 12-04 集中上报）。</p>
+</div><div class="card">
+<h2><span class="num">五、</span>全球武装冲突、政局动荡与经济危机全景</h2>
+<p class="secnote">扫描窗口 11-21 至 11-27。第一层为本周有实质进展的热点，逐条深写；第二层为其余全部纳入清单。四个归口逐类扫过：①国家间战争与跨境军事行动 ②内战、武装叛乱、恐怖袭击 ③政局动荡 ④经济与社会崩溃。<b>交战方声明一律标注「某方宣称」；伤亡数字注明来源与口径；查不到的明写未检索到可靠信源，不跳过国家。</b>本期检索资源集中于中东能源设施袭击、俄乌谈判与国内政策，第二层部分国家未检索到本周新增可靠信源，已逐项标注，不代表风险解除。</p>
+
+<h3>第一层 · 本周热点深写</h3>
+
+<h4>① 沙特—胡塞冲突升级：打击目标转向能源与金融核心（跨境袭击｜风险档位：极高）</h4>
+<p><b>动态：</b>胡塞武装<b>宣称</b> 11-25 两次行动分别击中沙特东部拉斯塔努拉炼油厂（沙特最大，55万桶/日，毗邻全球最大原油出口终端之一）与利雅得阿卜杜拉国王金融区（央视新闻、路透）；NASA 与 Planet Labs 卫星图像显示炼油厂上空约 600 平方公里浓烟（路透/CNN）。沙特联军称在拉斯塔努拉拦截并摧毁 4 架无人机、未确认炼厂受损；CNN 援引航运消息人士称袭击后该终端石油装船一度暂停、是否恢复不明。沙特民防部门确认 11-24 利雅得金融区最高楼（主权基金 PIF 总部所在）遭袭致 11 人受伤（确认受伤，沙特民防口径），为一周内第二次。11-26 沙特能源部证实吉赞炼油厂遭「敌对空中飞行物」击中起火，<b>一名尼泊尔籍工人死亡（确认死亡1人）、数名不同国籍人员受伤</b>，部分作业暂停（新华社/CNN）。联军 11-26 称对萨那、荷台达、萨达三省 50 个目标实施「精确军事行动」；胡塞控制的卫生部门称 48 小时内沙特空袭致至少 19 名平民死亡、25 人受伤（胡塞方口径，CNN 称无法独立核实）。自 9 月胡塞向曼德海峡推进以来，冲突烈度持续抬升。</p>
+<p><b>四行影响：</b>当地经济——沙特「2030愿景」核心资产（PIF总部、炼厂、机场）接连受威胁，金融区曾被迫远程办公，外资信心受挫；世界经济——拉斯塔努拉终端装船暂停若持续，将直接收紧全球原油现货供应，布伦特三连涨至 96.57 美元；中国经济——中国是沙特原油最大买家之一，进口成本与航运保费上行压力增加；中国普通人——国内油价本轮虽降 0.35 元/升，但 12-10 下轮窗口上调概率大，物流与出行成本中期趋升。</p>
+<p><b>观察指标：</b>拉斯塔努拉出口终端装船是否恢复（航运追踪数据）、沙特阿美是否正式披露设施损失、胡塞是否袭击红海沿岸吉达港得手、联军空袭是否升级为地面行动。</p>
+
+<h4>② 美伊对峙与霍尔木兹海峡（国家间战争｜风险档位：极高）</h4>
+<p><b>动态：</b>伊朗革命卫队海军<b>宣称</b> 11-26 两艘「违规」油轮在海塞卜港以北触雷爆炸起火，其中一艘为载油超 200 万桶的超级油轮、仍在燃烧（央视新闻、俄卫星社；路透称无法独立核实）；11-25 另<b>宣称</b>一艘 LNG 船触雷爆炸（新华社）。革命卫队重申七项条件（含解除美国封锁与制裁）落实前不开放海峡。伊朗军队总司令 11-24 称将进一步收紧封锁（新华网）。瑞达期货晨会援引消息称美国政府内部再次讨论袭击伊朗高层领导人（媒体转引消息人士，未获官方确认）。伊朗外长阿拉格齐 11-26 指责以色列借「伊朗在制药厂研制化武」的指控试图把美国拖入新战争（伊方口径）。科威特军方此前指控伊朗袭击其重要设施，伊朗武装部队发言人谢卡尔希否认（双方各执一词）。</p>
+<p><b>四行影响：</b>当地经济——海峡通行密度仍远低于战前，海湾国家出口绕行与保费成本高企；世界经济——全球约两成海运石油经此通道，触雷传闻每次出现都推升油价与战争险费率；中国经济——原油进口约半数来自海湾，航道风险直接关系能源安全与炼化成本；中国普通人——油价、海淘运费与部分化工品价格的中期上行风险。</p>
+<p><b>观察指标：</b>是否有第三方（英国海上贸易行动办公室/海事机构）确认触雷事件、超级油轮是否沉没或漏油、美军航母部署变化、伊美是否重启阿曼渠道对话。</p>
+
+<h4>③ 俄乌战争：换俘推进但停火无门（国家间战争｜风险档位：极高）</h4>
+<p><b>动态：</b>乌总统办公室主任布达诺夫 11-25 透露千人规模战俘交换将分多阶段实施，首批有望 11 月底或 12 月初移交、第一阶段 12-25 前完成（央广网）。俄副外长里亚布科夫 11-25 称愿继续俄美乌三方会谈但下一轮前景不明朗。佩斯科夫 11-26 拒绝欧盟委员会主席冯德莱恩提出的冬季能源停火倡议，称「俄罗斯对谁都没有欠什么」（俄方口径，UA.NEWS 转俄媒）。战场未停：俄国防部 11-25 通报打击乌能源与物流设施，基辅当晚响起强烈爆炸（乌方称）；乌军无人机打击俄一座军用机场（乌方宣称）。据英媒报道，美防长赫格塞思尚未批准向乌交付约 60 枚爱国者拦截弹，乌方视之为以军援施压停火妥协（媒体口径）。泽连斯基与默茨通话讨论能源停火前景与「自愿联盟」会议筹备。</p>
+<p><b>四行影响：</b>当地经济——乌克兰能源设施持续被打击，冬季供电供暖缺口扩大，拦截弹短缺加剧；世界经济——欧洲能源与防务财政压力延续，黑海航运风险压制粮价预期；中国经济——粮油进口与中欧班列沿线物流成本波动；中国普通人——面粉、食用油等进口关联商品价格与赴欧差旅成本的不确定性。</p>
+<p><b>观察指标：</b>首批换俘是否在 11 月底落地、俄方是否接受任何形式能源停火、美方爱国者拦截弹审批、下一轮三方会谈时间地点官宣。</p>
+
+<h4>④ 苏丹内战：无人机袭平民区常态化（内战｜风险档位：极高）</h4>
+<p><b>动态：</b>苏丹民间机构「紧急律师倡议」称 11-24 青尼罗州遭无人机袭击致 19 名平民死亡、20 人受伤，目标含罗赛雷斯大坝及周边电力设施（新华社引述，指认快速支援部队所为，RSF 未回应）；「苏丹医生网」另一口径为 17 死 14 伤（两机构统计范围不同，均为各方估算）。11-27 西科尔多凡州 Ghubeish 一辆载客卡车遭无人机袭击，至少 11 人死亡、9 人受伤（当地医院消息人士向法新社确认，RSF 政治翼指认政府军所为——双方互指，均未独立核实）。IOM 11-26 通报：2025年10月至2026年10月科尔多凡地区超 38.3 万人流离失所，仅 11 月新增 1.5 万。联合国估计今年上半年无人机袭击已致超 1100 人死亡。苏丹政府 11-25 拒绝埃塞俄比亚主办和平对话的倡议，指其支持 RSF（苏丹政府口径）。</p>
+<p><b>四行影响：</b>当地经济——农业与集市贸易被无人机战切断，人道危机为全球最严重之一；世界经济——阿拉伯胶（全球主要产地）供应链受扰，食品工业添加剂成本承压；中国经济——阿拉伯胶进口依赖苏丹，饮料与糖果产业链有隐性敞口；中国普通人——相关进口消费品价格波动有限但在累积。</p>
+<p><b>观察指标：</b>RSF 是否攻占青尼罗州首府达马津、无人机袭击是否波及喀土穆以外国际援助通道、非盟/伊加特调解是否重启。</p>
+
+<h4>⑤ 刚果（金）东部：战火阻断埃博拉防疫（武装叛乱+公共卫生｜风险档位：极高）</h4>
+<p><b>动态：</b>伊图里省政府军与反政府武装「人民革命公约」（CRP）冲突升级，联合国维和人员 11-24 协助撤离被困医院 3 天的 10 名埃博拉防疫人员（含世卫组织 2 名员工，联刚稳定团声明）；此前孟加拉与尼泊尔维和部队护送 380 名平民返回容纳约 7 万人的流离失所者营地（联合国新闻）。CRP <b>宣称</b>已暂停向布尼亚推进，政府军称已击退叛军（双方口径，居民称局势仍动荡）。WHO 周报显示刚果（金）本轮疫情累计 11762 例、5775 死（病死率 49.1%，WHO 11-26 周报口径）。</p>
+<p><b>四行影响：</b>当地经济——矿区与农业劳动力流离失所，钴铜供应链局部受扰；世界经济——疫情若跨境扩散将冲击中部非洲贸易与航空；中国经济——钴原料进口（电池产业链）对刚果金依赖度高，长期供应稳定性受影响；中国普通人——动力电池原材料成本的远期变量，短期无感。</p>
+<p><b>观察指标：</b>防疫人员能否重返疫区、CRP 与政府军是否达成局部人道停火、疫情是否扩散至南苏丹/乌干达边境。</p>
+
+<h3>第二层 · 其余国家与地区清单</h3>
+<p class="secnote">格式：国家/地区｜冲突或危机类型｜本周变化｜风险档位。「未检索到本周可靠信源」指本期检索未覆盖到新增进展，不代表局势缓和。</p>
+<table><thead><tr><th>国家/地区</th><th>类型</th><th>本周变化</th><th>风险档位</th></tr></thead><tbody>
+<tr><td data-l="国家/地区">缅甸</td><td data-l="类型">内战/和谈</td><td data-l="本周变化">中国亚洲事务特使邓锡军11-25在京会见缅和委会秘书敏乃，中方称缅北总体稳定局面来之不易、愿继续提供对话平台（外交部）</td><td data-l="风险档位">极高（沿用）</td></tr>
+<tr><td data-l="国家/地区">阿富汗</td><td data-l="类型">政权/人道</td><td data-l="本周变化">未检索到本周可靠信源</td><td data-l="风险档位">高（沿用）</td></tr>
+<tr><td data-l="国家/地区">巴基斯坦</td><td data-l="类型">恐袭/跨境</td><td data-l="本周变化">未检索到本周可靠信源</td><td data-l="风险档位">高（沿用）</td></tr>
+<tr><td data-l="国家/地区">印度</td><td data-l="类型">边境/贸易</td><td data-l="本周变化">美国301「产能过剩」调查拟对印加征15–20%关税（USTR公告，瑞达期货晨会转引）</td><td data-l="风险档位">中</td></tr>
+<tr><td data-l="国家/地区">孟加拉国 / 斯里兰卡 / 尼泊尔</td><td data-l="类型">政局/经济</td><td data-l="本周变化">未检索到本周可靠信源；尼泊尔籍工人在沙特吉赞炼厂袭击中遇难1人（沙特能源部）</td><td data-l="风险档位">中（沿用）</td></tr>
+<tr><td data-l="国家/地区">菲律宾南部 / 印尼巴布亚 / 泰国南部</td><td data-l="类型">分离主义/叛乱</td><td data-l="本周变化">未检索到本周可靠信源；印尼被列入英伟达AI服务器断供名单（金融时报）</td><td data-l="风险档位">中（沿用）</td></tr>
+<tr><td data-l="国家/地区">朝鲜半岛</td><td data-l="类型">国家间对峙</td><td data-l="本周变化">朝鲜关闭瑞士驻平壤外交办事处，瑞士外交部11-25表示遗憾、称不影响两国外交关系（瑞士外交部）</td><td data-l="风险档位">高（沿用）</td></tr>
+<tr><td data-l="国家/地区">台海</td><td data-l="类型">国家间对峙</td><td data-l="本周变化">未检索到本周新增军事动作可靠信源；美国301关税威胁为主要外部变量</td><td data-l="风险档位">高（沿用）</td></tr>
+<tr><td data-l="国家/地区">以色列 / 加沙</td><td data-l="类型">国家间战争/政局</td><td data-l="本周变化">正直党与民主党达成双边组阁协议，承诺废除内塔尼亚胡司法改革（两党联合声明）；加沙战场未检索到本周新增可靠信源</td><td data-l="风险档位">极高（沿用）</td></tr>
+<tr><td data-l="国家/地区">黎巴嫩</td><td data-l="类型">跨境冲突</td><td data-l="本周变化">未检索到本周可靠信源</td><td data-l="风险档位">高（沿用）</td></tr>
+<tr><td data-l="国家/地区">叙利亚 / 伊拉克</td><td data-l="类型">内战/代理人</td><td data-l="本周变化">伊拉克质疑OPEC+产能评估结果，联盟内部协调难度上升（华尔街见闻转引）；战场未检索到本周可靠信源</td><td data-l="风险档位">高（沿用）</td></tr>
+<tr><td data-l="国家/地区">约旦河西岸</td><td data-l="类型">占领/暴力</td><td data-l="本周变化">未检索到本周可靠信源</td><td data-l="风险档位">高（沿用）</td></tr>
+<tr><td data-l="国家/地区">土耳其—PKK</td><td data-l="类型">武装叛乱/司法</td><td data-l="本周变化">土耳其调查前银监机构负责人，涉操纵股价指控（新华财经11-27）；PKK战线未检索到本周可靠信源</td><td data-l="风险档位">中（沿用）</td></tr>
+<tr><td data-l="国家/地区">也门（胡塞控制区）</td><td data-l="类型">内战/人道</td><td data-l="本周变化">联军称11-26摧毁萨那/荷台达/萨达50个目标；胡塞方称48小时空袭致19平民死（胡塞卫生部门口径，未独立核实）</td><td data-l="风险档位">极高</td></tr>
+<tr><td data-l="国家/地区">巴林 / 科威特 / 阿联酋</td><td data-l="类型">跨境波及</td><td data-l="本周变化">科威特指控伊朗袭击其设施遭伊方否认（双方口径）；阿联酋退出OPEC+加剧联盟协调难度（华尔街见闻转引）</td><td data-l="风险档位">高（沿用）</td></tr>
+<tr><td data-l="国家/地区">南苏丹</td><td data-l="类型">内战/人道</td><td data-l="本周变化">WHO警告人口2030年将达2030万、医疗需求激增（WHO 11-26报告）；刚果金埃博拉疫情向其边境筛查压力上升</td><td data-l="风险档位">极高（沿用）</td></tr>
+<tr><td data-l="国家/地区">索马里 / 埃塞 / 萨赫勒</td><td data-l="类型">恐袭/内战</td><td data-l="本周变化">埃塞被苏丹政府指支持RSF并遭拒绝对话倡议（苏丹政府口径）；其余未检索到本周可靠信源</td><td data-l="风险档位">极高（沿用）</td></tr>
+<tr><td data-l="国家/地区">尼日利亚 / 莫桑比克 / 喀麦隆</td><td data-l="类型">叛乱/恐袭</td><td data-l="本周变化">ACLED 11-26报告：莫桑比克ISM叛乱进入第10年、威胁扩张；其余未检索到本周可靠信源</td><td data-l="风险档位">高（沿用）</td></tr>
+<tr><td data-l="国家/地区">利比亚 / 中非 / 乍得</td><td data-l="类型">政局/武装</td><td data-l="本周变化">乌克兰外长瑟比加11-26否认有意将俄乌冲突扩展至利比亚（此前有相关传闻）；其余未检索到本周可靠信源</td><td data-l="风险档位">高（沿用）</td></tr>
+<tr><td data-l="国家/地区">津巴布韦 / 南非</td><td data-l="类型">公共卫生/经济</td><td data-l="本周变化">津巴布韦霍乱疫情持续（IFRC 11-26报告）；南非未检索到本周可靠信源</td><td data-l="风险档位">中（沿用）</td></tr>
+<tr><td data-l="国家/地区">科索沃—塞尔维亚 / 波黑</td><td data-l="类型">政局对峙</td><td data-l="本周变化">未检索到本周可靠信源</td><td data-l="风险档位">中（沿用）</td></tr>
+<tr><td data-l="国家/地区">摩尔多瓦 / 白俄罗斯 / 格鲁吉亚</td><td data-l="类型">政局/外部干预</td><td data-l="本周变化">未检索到本周可靠信源</td><td data-l="风险档位">中（沿用）</td></tr>
+<tr><td data-l="国家/地区">亚美尼亚—阿塞拜疆</td><td data-l="类型">国家间对峙</td><td data-l="本周变化">未检索到本周可靠信源</td><td data-l="风险档位">中（沿用）</td></tr>
+<tr><td data-l="国家/地区">法国 / 德国 / 欧洲抗议</td><td data-l="类型">财政/社会</td><td data-l="本周变化">欧央行管委点名法国政府债务融资成本上升风险（斯莱彭11-24讲话）；未检索到大规模抗议新增信源</td><td data-l="风险档位">中</td></tr>
+<tr><td data-l="国家/地区">海地</td><td data-l="类型">帮派/政府失能</td><td data-l="本周变化">WHO总干事谭塞德访问太子港：全国仅24.5%医疗机构完全运转，2026年490万人需医疗援助；La Paz医院年内接诊291名枪伤者（WHO 11-26）</td><td data-l="风险档位">极高</td></tr>
+<tr><td data-l="国家/地区">墨西哥</td><td data-l="类型">贩毒武装</td><td data-l="本周变化">军方11-26在米却肯—哈利斯科州界巡逻遭袭，击毙7名Los Reyes集团成员、逮捕10人缴枪30余支（墨国防部，法新社）</td><td data-l="风险档位">高</td></tr>
+<tr><td data-l="国家/地区">哥伦比亚 / 厄瓜多尔</td><td data-l="类型">贩毒武装/政局</td><td data-l="本周变化">未检索到本周可靠信源</td><td data-l="风险档位">高（沿用）</td></tr>
+<tr><td data-l="国家/地区">委内瑞拉</td><td data-l="类型">政局/外部压力</td><td data-l="本周变化">反对派领袖马查多称优先推动对美涵盖安全能源移民的长期战略协议、称冈萨雷斯将很快回国（11-26表态，新浪转引）；联合国专家敦促最高法院换届保障司法独立（UN 11-26）</td><td data-l="风险档位">高</td></tr>
+<tr><td data-l="国家/地区">秘鲁 / 玻利维亚</td><td data-l="类型">政局/经济</td><td data-l="本周变化">未检索到本周可靠信源</td><td data-l="风险档位">中（沿用）</td></tr>
+<tr><td data-l="国家/地区">阿根廷 / 巴西</td><td data-l="类型">外交摩擦/经济</td><td data-l="本周变化">巴西决定驻阿根廷大使不再返任，回应阿外长质疑巴西大选公正性（11-25，澎湃转引）；阿根廷为南美唯一未祝贺卢拉连任的政府</td><td data-l="风险档位">中</td></tr>
+<tr><td data-l="国家/地区">美国</td><td data-l="类型">政局/制度</td><td data-l="本周变化">特朗普公开指控三季度GDP数据「造假被蓄意压低」并要求调查（11-26发文，华尔街见闻）；美联储理事鲍曼涉违反缄默期遭内部调查（媒体援引知情人士）</td><td data-l="风险档位">中</td></tr>
+<tr><td data-l="国家/地区">加拿大 / 澳大利亚 / 大洋洲</td><td data-l="类型">—</td><td data-l="本周变化">IMF敦促澳洲联储做好进一步加息准备并呼吁收紧财政（11-27磋商报告）；加拿大与太平洋岛国未检索到本周冲突类可靠信源</td><td data-l="风险档位">低</td></tr>
+<tr><td data-l="国家/地区">韩国 / 日本</td><td data-l="类型">金融市场动荡</td><td data-l="本周变化">KOSPI 11-25跌6.16%（三星电子-9.9%、SK海力士-11.1%），监管11-29召集股市稳定基金紧急会议、被曝向银行券商募资（华尔街见闻转引）；日本无冲突类新增</td><td data-l="风险档位">中</td></tr>
+</tbody></table>
+<p class="src">来源：新华社、央视新闻、央广网、路透、法新社、CNN、联合国新闻、WHO/IOM/IFRC/ACLED（ReliefWeb）、澎湃新闻（外交简报）、华尔街见闻、新华财经；胡塞、伊朗革命卫队、苏丹冲突双方的战果与伤亡声明均已标注宣称方与口径，未采信任何一方单方面说法。</p>
+</div><div class="card">
+<h2><span class="num">六、</span>主要经济体最新经济政策</h2>
+
+<h4>中国：国常会资本市场重磅定调 + 货币呵护跨月 + 算力/通信产业政策密集落地</h4>
+<p><b>货币：</b>11-27 开展 7940 亿元隔夜逆回购（利率 1.25%），对冲 5715 亿元到期后净投放 2225 亿元，DR001 回落至 1.27% 附近；11-25 已开展 8000 亿元 MLF 操作对冲当月 1 万亿到期（缩量续作）。<b>财政：</b>四大行股票回购增持贷款合同超 6000 亿元（回购增持再贷款转为长期制度安排并降息后加速投放）；湖南出台直接融资意见统筹化债与转型。<b>产业贸易：</b>国常会 11-27 研究深化资本市场投融资综合改革（详见第一节）；工信部联合网信办、发改委印发《新一代通信网建设实施方案》——2030 年建成新一代通信网、适时开展 6G 网络建设、低轨卫星互联网基本建成；广东算力「十五五」规划鼓励国产芯片优先；国家数据局 11-26 就《完善数据规则赋能AI创新发展若干意见》公开征求意见（支持采集生成数据用于AI训练推理）；商务部回应美国 301 关税：坚决反对、敦促纠正，同时确认美方豁免 300 亿美元对等降税清单、望尽快落地。统计局：1–10 月规上工业企业利润同比 +16.0%，电子行业利润翻倍（+1.0倍）拉动全部利润 9.7 个百分点。</p>
+<p><b>四行影响：</b>国内经济——政策底信号明确，股市放量暴涨、风险偏好逆转，但债市理财赎回负反馈仍在；世界经济——中国稳市降低全球风险资产尾部波动，中美对等降税若落地缓解贸易摩擦；政策含义——「平准基金」制度化+算力国产化+数据要素市场化三线并进，资本市场被定位为宏观治理核心枢纽；中国普通人——证券账户回血、科技就业景气，但信用债理财净值波动需容忍，房贷利率无变化。</p>
+
+<h4>美国：12月加息板上钉钉，分歧在明年加几次；关税再挥棒</h4>
+<p><b>货币：</b>10 月核心 PCE 同比 3.3%（预期3.2%、前值3.1%）、整体 PCE 3.8%，三季度 GDP 二次估算上修至 4.3%；褐皮书显示 11 月物价压力范围扩大。利率期货 99% 定价 12-08/09 加息 25 基点，明年 1 月再加概率约 60%；高盛预计 12 月与明年 3 月各加 25 基点、首次降息推迟至 2027 年 12 月；德银更鹰（12月+1月+3月）。Timiraos：别指望美联储救市，沃什可能乐见 AI 下跌收紧金融条件。<b>财政：</b>特朗普指控 GDP 数据造假要求调查（政治噪音，无实质财政动作）。<b>产业贸易：</b>USTR「产能过剩」301 调查拟对中国加征 20%（谈判破裂或至 40%）、对欧盟日韩印等 14 经济体加征 15–20%；新出口管制延伸至云端算力，英伟达东南亚服务器断供；FCC 批准 SpaceX 百万卫星太空数据中心。</p>
+<p><b>四行影响：</b>国内经济——高利率压制地产与消费信贷，但 GDP 4.3% 显示韧性，AI 投资贡献显著；世界经济——美元与美债利率高位虹吸流动性，新兴市场被迫跟随收紧；政策含义——「通胀顽固+经济强劲」组合让美联储没有转鸽理由，AI 资本开支本身被列为通胀来源；中国普通人——美元理财收益仍高但汇率双向波动加大，对美出口企业面临 301 关税不确定性。</p>
+
+<h4>欧元区：10月纪要确认通胀恶化，12月加息几成定局；新行长落定</h4>
+<p><b>货币：</b>欧央行 11-26 公布 10 月纪要：委员普遍认为通胀前景恶化、未来很可能需进一步收紧，部分担心 2028 年后才回到 2%；欧元区 10 月调和 CPI 同比 4.0%（能源分项 21.0%）。管委斯莱彭称 12 月加息方向明确。另据消息人士，欧央行讨论了上调最低准备金率的可能性，决定或在 12 月或明年初。<b>财政：</b>冯德莱恩提出对乌冬季能源停火倡议遭俄拒绝；法国债务融资成本上升被欧央行点名。<b>产业贸易：</b>欧盟对混动汽车设 200 天配额保障措施，中国获 19.2 万辆（年化35万辆）居九方之首，商务部称保留 WTO 起诉权；欧元区正式提名西班牙前央行行长德科斯 2027 年 2 月接替拉加德（货币政策倾向偏鸽但强调财政纪律）。</p>
+<p><b>四行影响：</b>国内经济——能源通胀 21% 挤压实际收入，加息又抬高法意等高负债国融资成本，两难加剧；世界经济——欧央行加入加息阵营强化全球紧缩共振；政策含义——欧洲把「通胀顽固」归因于能源与工资，与中国需求不足形成镜像；中国普通人——欧洲订单外贸企业需关注需求走弱，混动车出口配额约束直接影响车企排产。</p>
+
+<h4>日本：田村放鹰「不排除一次加50基点」，东京CPI再添筹码</h4>
+<p><b>货币：</b>央行审议委员田村直树 11-26 表示应尽快将政策利率提升至约 2% 的中性水平，基本设想每隔几个月加 25 基点、必要时一次加 50 基点，明确支持 12 月行动；OIS 定价 12-18 会议加息概率约 80%。11-27 公布的东京 11 月核心 CPI 同比 2.9% 创 16 个月新高；全国 10 月剔除生鲜与临时因素 CPI 达 3.5%、企业服务价格增速 36 年最快。路透调查 86% 经济学家预计 12 月加至 1.50%——若兑现为 37 年来首次一年内加息三次。<b>财政：</b>财务省官员称超长债供需改善，下财年发债计划评估规模与流动性。<b>产业贸易：</b>未检索到本周新增重大动作。</p>
+<p><b>四行影响：</b>国内经济——加息抑制输入型通胀但内需偏弱，政府债务利息负担上升；世界经济——日元套息交易平仓风险是全球流动性的潜在冲击源；政策含义——日本是唯一「通胀达标后防超调」的主要央行，正常化决心最坚定；中国普通人——赴日旅游购物成本随日元走强趋升，日系设备材料进口价格有上行压力。</p>
+
+<h4>英国：放宽银行资本要求释放千亿英镑，同时警告AI债务风险</h4>
+<p>央行 11-26 宣布下调银行资本要求 30 个基点，释放约 1000 亿英镑放贷能力，但明确拒绝大幅削弱资本缓冲，并警告 AI 融资、家庭财务压力与主权债务风险；MPC 委员格林 11-24 称适宜进一步收紧货币政策。10 年期英债收益率 11-26 上行 1.5BP 至 5.146%。<b>含义：</b>「宽监管+紧货币」组合，试图在不降息的情况下托底信贷。</p>
+
+<h4>韩国：股市稳定基金紧急会议，救市弹药不足</h4>
+<p>KOSPI 11-25 单日跌 6.16%（三星电子 -9.9%、SK海力士 -11.1%），金融服务委员会 11-29 召集股市稳定基金投资管理委员会紧急会议，要求银行券商保险出席；媒体称基金规模不足一个平常交易日成交额、正转向金融机构募资（华尔街见闻转引）。<b>含义：</b>存储芯片股灾已从股价问题演变为金融稳定问题，韩国版「国家队」正在补课——与中国国常会同日形成东亚稳市政策的镜像。</p>
+
+<h4>其余 G20 与主要新兴市场</h4>
+<p>加拿大、法国、德国、意大利、俄罗斯、沙特、土耳其、巴西、墨西哥、阿根廷、南非、印度、印尼本期未检索到新增货币或财政重大动作的可靠信源，一行带过。可观测变化：俄罗斯普京要求更新 2036 年前 AI 国家战略（新华财经 11-27）；澳大利亚本月已加息、年内累计收紧 125 基点，IMF 敦促做好进一步加息准备并收紧财政（11-27 磋商报告）；OPEC+ 拟维持产量配额至明年 1 月、11-29 商讨 2027 年目标，伊拉克质疑产能评估、阿联酋退出加剧协调难度。中东产油国方面，沙特能源部确认吉赞炼厂遇袭部分停产是本周最实质的供应侧事件。</p>
+<p class="src">来源：证监会官网（国常会通稿）、中国人民银行公开市场公告、国家统计局、工信部、商务部例行发布会、国家数据局、新华社、新华财经、财联社、上海证券报、华尔街见闻、Wind万得、瑞达期货晨会、路透调查转引。</p>
+</div>
+
+<div class="card">
+<h2><span class="num">专题B、</span>AI 资讯（10 条）</h2>
+<p class="secnote">窗口：截至 2026-11-27 15:30 前 24 小时（即 11-26 15:30 至 11-27 15:30），按重要性排序。覆盖国内动态、海外大厂、技术模型、算力芯片、融资并购、政策监管六类。标题按利好红/利空绿着色。<b>窗口外旧闻不入正选</b>：本期排除谷歌 Genie 4 向订阅用户开放（事件 11-18）、汤森路透 Thomson 1.1 模型报道（11-26 19:31 发布但事件为「年底推出」预告且首发于窗口边缘，已按发布时间纳入第9条）、Anthropic VP≠VNP 数学论文（11-23）、腾讯 Nature 多肽成果（11-26 早间报道，事件属上周投稿）。厂商自报评测与数据均已标注口径；「腾讯全员推HY4」「特斯拉SpaceX合并」等传闻类信息已标注爆料/媒体口径。</p>
+<div class="ni u"><p class="nt">1. 国常会首提「国家队+类平准基金」，AI与科技成长获流动性制度背书</p><p class="nb">11月27日午间国常会研究深化资本市场投融资综合改革：加力发挥国家队稳市作用、优化中央汇金类平准基金功能、提供充足流动性保障，完善保险/年金/社保中长期资金入市政策。10月初以来股票型ETF净申购近8000亿元。午后创业板指收涨11.61%、科创50涨15.07%，半导体与AI算力链全线涨停潮。</p><p class="nm">【政策监管】来源：新华社/证监会官网 · 发布时间：11-27 午间发布（14:42上证报解读） · 原文：<a href="http://www.csrc.gov.cn/csrc/c100028/c7673432/content.shtml" target="_blank" rel="noopener">http://www.csrc.gov.cn/csrc/c100028/c7673432/content.shtml</a></p></div>
+<div class="ni d"><p class="nt">2. 英伟达要求伙伴停止向东南亚四国发运AI服务器，出口管制延伸至云端算力</p><p class="nb">据英国金融时报，英伟达已通知戴尔、超微等制造伙伴停止向新加坡、马来西亚、泰国、印尼买家交付AI服务器（蓝点网称名单含巴西），以符合美国新出口管制；美联社称美国政府新增对上述经济体的先进芯片许可要求。传统上这些数据中心大部分算力租给其他国家AI公司——管制逻辑从「禁售中国」升级为「封堵绕道」。</p><p class="nm">【算力芯片】来源：金融时报（华尔街见闻/极客公园转引） · 发布时间：11-26 晚间报道（事件美东11-25/26） · 原文：<a href="http://m.toutiao.com/group/7712658065572807178/" target="_blank" rel="noopener">http://m.toutiao.com/group/7712658065572807178/</a></p></div>
+<div class="ni u"><p class="nt">3. 腾讯混元发布3D大模型Hy3D 3.6：高模+PBR材质直出，社区下载量超653万</p><p class="nb">11月27日腾讯混元发布新一代原生3D生成模型Hy3D 3.6，重点优化高模几何与PBR材质贴图，已上线腾讯云Token Hub提供API，Miora/腾讯游戏LAP/WorkRally已接入。腾讯组织数百位专业3D美术盲测称几何与纹理质量显著优于同类（厂商自报口径）。混元3D系列开源社区下载量超653万。</p><p class="nm">【国内动态】来源：腾讯官方/每日经济新闻/钱江晚报 · 发布时间：11-27 11:00–12:26 · 原文：<a href="http://news.qq.com/rain/a/20261127A07BLB00" target="_blank" rel="noopener">http://news.qq.com/rain/a/20261127A07BLB00</a></p></div>
+<div class="ni u"><p class="nt">4. 智谱辟谣GLM-5.5延期：性能Fable级、万卡昇腾950DT训练进展顺利</p><p class="nb">11月26日晚智谱高管杨昊翊公开辟谣路透「GLM-5.5跳票至2027Q1」报道，称系假消息。券商研报口径其参数量2–3万亿、性能达Fable级；用于前期训练的万卡昇腾950DT集群进展顺利、预计明年跑通——国产AI芯片正从推理替代走向旗舰训练主力（公司方口径，未独立验证）。</p><p class="nm">【技术模型】来源：快科技/极客公园 · 发布时间：11-26 22:07 · 原文：<a href="http://finance.sina.cn/tech/2026-11-26/detail-inkaapny8176881.d.html" target="_blank" rel="noopener">http://finance.sina.cn/tech/2026-11-26/detail-inkaapny8176881.d.html</a></p></div>
+<div class="ni d"><p class="nt">5. OpenAI承认GPT-6.2计费错误：修复后Astra额度消耗加快40%、Sol加快25%</p><p class="nb">OpenAI修复GPT-6.2上线初期按折扣价计费的错误，Codex与ChatGPT负责人Sottiaux确认修复后同等工作量消耗更多额度：Astra用户触顶速度较上周加快40%、Sol加快25%；不追溯补收差额。另确认已向小部分Pro用户测试Chat与Work模式合并。变相涨价引发开发者不满。</p><p class="nm">【海外大厂】来源：IT之家（极客公园转引） · 发布时间：11-27 早间报道（事件美东11-26） · 原文：<a href="http://m.toutiao.com/group/7712658065572807178/" target="_blank" rel="noopener">http://m.toutiao.com/group/7712658065572807178/</a></p></div>
+<div class="ni u"><p class="nt">6. 马斯克推动特斯拉-SpaceX全股票合并，目标年底达成、市值约3.5万亿美元</p><p class="nb">金融时报11月26日报道马斯克争取12月31日前达成特斯拉与SpaceX全股票合并协议，合并后市值约3.5万亿美元、或成史上最大并购。知情人士称双方尚未接近达成协议；需特斯拉特别股东大会超50%流通股赞成，马斯克持股约20%投票权。落地存重大不确定性（媒体报道口径）。</p><p class="nm">【融资并购】来源：金融时报（IT之家/极客公园转引） · 发布时间：11-26 报道 · 原文：<a href="http://m.toutiao.com/group/7712658065572807178/" target="_blank" rel="noopener">http://m.toutiao.com/group/7712658065572807178/</a></p></div>
+<div class="ni u"><p class="nt">7. 国家数据局征求意见：支持采集生成数据用于AI训练推理，鼓励为数据付费</p><p class="nb">11月26日国家数据局就《关于完善数据规则赋能人工智能创新发展的若干意见》草案公开征求意见：推动数据产权制度在AI用数领域运用，支持采集生成数据、衍生数据、协议取得数据依法合规用于AI训练和推理，支持和鼓励为数据付费。AI训练数据合规化与要素市场化迈出关键一步。</p><p class="nm">【政策监管】来源：上海证券报（华尔街见闻转引） · 发布时间：11-26 · 原文：<a href="http://m.163.com/dy/article/LCNM2IJ105198NMR.html" target="_blank" rel="noopener">http://m.163.com/dy/article/LCNM2IJ105198NMR.html</a></p></div>
+<div class="ni u"><p class="nt">8. ISSCC 2027议程披露华为定制HBM：五层混合键合、引脚密度约为海外量产两倍</p><p class="nb">IEEE ISSCC 2027议程草案列入华为4篇论文，含定制HBM方案（五层晶圆混合键合、集成存储控制器、64通道4096数据接口，数据引脚密度约为海外现有量产产品两倍）与长鑫存储DDR5混合键合研究。若量产将缓解国产AI芯片高带宽内存瓶颈（会议议程口径，量产时间未定）。11-27澜起科技收涨15.69%。</p><p class="nm">【算力芯片】来源：科创板日报/每日经济新闻 · 发布时间：11-27 11:25–15:09 · 原文：<a href="http://m.toutiao.com/group/7712744824965579305/" target="_blank" rel="noopener">http://m.toutiao.com/group/7712744824965579305/</a></p></div>
+<div class="ni u"><p class="nt">9. 汤森路透年底推Thomson 1.1：基于智谱GLM与谷歌Gemma构建</p><p class="nb">据商业内幕11月26日报道，路透社母公司汤森路透将于年底推出基于中国智谱GLM与谷歌Gemma开源模型的新模型Thomson 1.1，主打税务咨询等中等难度任务；CTO称GLM计算机操作能力出色。此前Thomson 1.0基于阿里千问。西方主流媒体集团持续采用中国开源模型底座。</p><p class="nm">【技术模型】来源：凤凰网科技（转商业内幕） · 发布时间：11-26 19:31 · 原文：<a href="https://original.ifeng.com/c/8yNAmXTootU" target="_blank" rel="noopener">https://original.ifeng.com/c/8yNAmXTootU</a></p></div>
+<div class="ni d"><p class="nt">10. Character.AI破产拍卖含2100万账户聊天记录，其中210万属未成年人</p><p class="nb">已申请破产保护的AI聊天平台Character.AI计划12月1日拍卖资产，出售范围含超2100万美国账户的私人对话记录与IP等元数据，其中超210万账户为未成年人所有。用户隐私数据作为破产资产处置引发重大伦理与监管争议——AI陪伴产品的数据退出机制缺失暴露无遗。</p><p class="nm">【政策监管】来源：快科技（新浪科技转载） · 发布时间：11-27 · 原文：<a href="http://finance.sina.com.cn/tech/discovery/2026-11-27/doc-inkaczqf1054082.shtml" target="_blank" rel="noopener">http://finance.sina.com.cn/tech/discovery/2026-11-27/doc-inkaczqf1054082.shtml</a></p></div>
+</div>
+
+<div class="card">
+<h2><span class="num">七、</span>一句话总结</h2>
+<p style="font-size:16px"><b>今天中国市场只交易一件事：国常会把「国家队兜底」写成了制度，于是创业板用历史第二大涨幅宣告政策底成立——但黄金的深V反弹和英伟达的CDS新高同时提醒我们，全球利率顶和AI债务顶都还没过，12月中旬三大央行议息之前，这是反弹不是反转的确认。</b></p>
+</div>
+
+<div class="card">
+<h2><span class="num">八、</span>数据核验说明</h2>
+<ol>
+<li><b>美股日期必须写清：本报美股全部是美东 11-25（周三）收盘。</b>11-26 周四感恩节休市，11-27 周五为半日交易（美东 13:00 提前收盘、北京时间 11-28 凌晨 2:00 结束）。因此「本周」锚点仍是上周五 11-20 收盘，而美股周内只有三个交易日（23/24/25）。任何把「11-27 美股」当成已发生数据的写法都是错的；周五晚的行情<b>尚未被A股消化</b>。</li>
+<li><b>布伦特两个价格不矛盾，是合约口径差。</b>本报数据总览的 92.34 美元是新浪布伦特主力连续合约 16:01 快照（昨收 91.67）；媒体报道的「11-26 收 96.57 美元涨 2.07%」是 ICE 布伦特 1 月合约结算价。连续合约与单月合约在换月期存在数美元价差，两组数字不可互相验证或混算涨跌幅。WTI 同理：本报 85.98 美元为 1 月合约盘中价，11-25 结算 83.68 美元为昨日基准。</li>
+<li><b>金价「涨2.8%」与「距高点跌34%」并存，是时点差。</b>16:01 的 3666.06 美元相对昨收 3566.26 涨 2.80%，是日内修复；相对 1 月 29 日高点 5598.75 美元仍回撤约 34.5%。上金所 Au99.99 的 784.00 元/克是 15:30 日盘收盘，与伦敦金 16:01 快照存在 31 分钟时差，内外盘换算还需考虑汇率与升贴水，不能直接互推。</li>
+<li><b>中美利差用了不同交易日，须注明。</b>本报中债 1.603% 为 11-27 盘中（新华财经 13:16），美债 4.86% 为美东 11-25 收盘（11-26 休市），利差约 -326BP 存在时点错配；严格同日比较需等美东 11-27 收盘。今日中债收益率是<b>上行</b> 1.65BP（股市抽血+理财赎回），别把「股市大涨」直觉等同于「债市大涨」。</li>
+<li><b>中证系指数当日收盘未获确认，替代关系已明示。</b>H30184/930652/931723 今日东财实时接口持续拒连、中证官网仅更新至 11-26，本报如实标注未获确认并附官网最新收盘；算力用国证算力 399363 替代中证算力 931688（两者编制方案不同，涨跌幅不可直接等同）；标普500信息技术用 XLK ETF 代理，<b>ETF 价格不等于指数点位</b>。个股周月涨跌锚点固定为 11-20 与 10-30 收盘，非「近一周/近一月」。</li>
+<li><b>伤亡口径差：苏丹同日两起袭击数字不同源。</b>青尼罗州 11-24 袭击「19死20伤」（紧急律师倡议）与「17死14伤」（苏丹医生网）为两家机构不同统计范围，均属各方估算；西科尔多凡 11-27 卡车袭击 11 死为医院消息人士向法新社确认。沙特吉赞炼厂 1 名尼泊尔工人死亡为沙特能源部官方确认。胡塞方称的「19平民死于联军空袭」未经独立核实，已标注宣称方。</li>
+<li><b>本期缺口如实披露：</b>①中证 H30184/930652/931723/931688 当日收盘未获权威值（接口拒连+官网延迟）；②美元指数今日实时未获确认（hf_DINIW 返回空、东财拒连），采用 11-26 收盘 103.7834；③92# 汽油全国精确均价无官方口径，采用隆众测算零售限价区间 7.7–7.8 元/升；④COMEX 黄金具体合约月接口未标注，采用主力连续口径；⑤10 年期国债采用盘中 13:16 报价而非收盘定盘值；⑥拉斯塔努拉终端装船是否恢复未获确认（CNN 航运消息人士称暂停后无下文）；⑦霍尔木兹触雷事件均为伊方宣称，路透称无法独立核实。以上均未以估算数字填充。</li>
+</ol>
+</div>
+
+<div class="card">
+<h2><span class="num">九、</span>风险提示与免责声明</h2>
+<p>本报告为公开信息整理与宏观解读，不构成投资建议。投资有风险，决策请自行判断。</p>
+<p class="src">本期固定地址 https://zhkii.github.io/atman-daily/ （GitHub Pages 托管，公网可访问，历史期次长期留存）。数据来源均为 A/B 级公开信源，C 级线索已回查一手，未获确认项已如实标注。交战方声明均标注宣称方，未作为已核实事实采信。</p>
+</div>
+
+<div class="foot">
+奥特曼之家的日报 · 2026年11月27日收盘深度版 · 数据截止北京时间16:05<br>
+本报告为公开信息整理与宏观解读，不构成投资建议。投资有风险，决策请自行判断。
+</div>
+</div>
+<script>
+function copyLink(){
+ var el=document.getElementById('shareLink');var v=(location.protocol.indexOf('http')===0)?location.href:el.value;
+ if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(v).then(function(){alert('链接已复制');},function(){fallback(el,v);});}
+ else{fallback(el,v);}
+}
+function fallback(el,v){el.value=v;el.select();el.setSelectionRange(0,99999);try{document.execCommand('copy');alert('已复制，若失败请长按输入框手动复制');}catch(e){alert('复制失败，请长按输入框手动复制');}}
+function copyAll(){
+ var t=document.querySelector('.wrap').innerText;
+ if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t).then(function(){alert('全文已复制');},function(){selectAll();});}
+ else{selectAll();}
+}
+function selectAll(){var r=document.createRange();r.selectNodeContents(document.querySelector('.wrap'));var s=window.getSelection();s.removeAllRanges();s.addRange(r);alert('已全选，请按 Ctrl+C 复制');}
+</script>
+</body>
+</html>
